@@ -1,0 +1,341 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Property Relay</title>
+  <meta name="description" content="Property Relay is a hat tip to BTC Relay and aims to do two things centred around Ethereum's global computer.  Firstly, provide a resource for the desciption of physical property, initally privately owned real estate. Secondly, provide a relay between this resource and smart contracts.">
+  <meta name="keywords" content="'property relay', 'btc relay', 'smart contracts', ethereum, bitcoin,'physical assets','physical property','real assets', 'real estate', relay, property">
+  <meta name="author" content="Tim">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+  <link rel="stylesheet" media="screen and (max-width: 700px)" href="css/mobile.css" />
+  <link rel='stylesheet' media='screen and (min-width: 701px)' href='css/laptop.css' />
+  
+</head>
+ 
+<body>
+  <!--<script src="js/scripts.js"></script>-->
+<div class="bodyformat">
+<H2>Property Relay</H2>
+<H3>Notes</H3>
+<h4>Page 0</h4>
+<H4>Notes made from 16 March 16</H4>
+<p>One possibility is a social network for homeowners.  This would be possible because of the information
+collected in the process of selling the property by the Property Relay Dapp.  It would grow slowly as people decided to 
+sell their property.</p>
+<p>I had thought about using a subsciption structure like github.  Free for public records and charge for 
+private records.  Now I'm more inclined to do the same as other Dapps.  Charge a fee every time a contract is 
+called.  I have to look into this more because I am still unsure what my options are, how they would be 
+implemented. etc. Things like charging for seeing certain info. Like property price history.  And also
+monetising the data.  For example finding relationships between price and changes to property, like a fitted kitchen.</p>
+<p>HIPs Engergy Performance Certificate (EPC) - can be found at epcregister.com.</p>
+<p>A related service is www.nextdoor.com. Only real names and address.  Maybe confirm with land registry or
+relevant authority</p>
+<p>Competitors include airbnb and those stated on the index.html page.</p>
+<p>The simplist use case would be similar to the sale of property at auction.  Are auction properties sold
+as seen?</p>
+<p>Insuarance companies might have an interest in the property information provided on the website.  An
+issue is that if insurancde co's won't insure a building then that could indicate to a potential purchaser
+that it has no value due to some risk.</p>
+<p>The age of the property is usually included in the rics report.  But may not be exact date.  Would insurance
+companies have this info?  Would they provide it?  The landregistry.gov.uk blog website provides ways of finding the 
+age of a property.  My inital thoughts were that anyone could provide data/information for any property, a bit like
+wiki.  But that could lead to abuse.  The kind of problems wiki has.</p>
+<p>The advantage of real estate is it already has a legal framework.  Timeliness of data(?). So this can be used
+in the transition to P2P transfer of property with no trusted third party.  But the legal framework will no doubt
+change as this develops.  There are paralells with uber like the transition from driver to 
+driverless vehicles, although I am uncomfortable about the loss of jobs as a result of this.</p>
+<p>One of the things that needs to be considered is that big organisations are slow to move.  Insurance companies and 
+government need a lot of checks, meetings, peer reveiws and debate.</p>
+<h4>Page 1</h4>
+<H4>Notes made from 24 March 2016</H4>
+<p>How do Dapps work?</p>
+<p>Dapps, Decentralised Applicatioins, I think, can be written and added to but not edited.  Therefore the design of a Dapp
+has to be different to an existing app.  Can a Dapp be deleted?  Don't think so.</p>
+<p>I also wonder how I can monetise the Dapp.  I think charges can be written into the called contracts.  But unsure.
+The data could be valuable for data analysis.  As mentioned above maybe certain features could be charged for.</p>
+<p>I said that the property record needs to be separate from the current owner because a record can't be edited in a
+Dapp.  So a timeline of record(s) for each property might be necessary.  Can the record be made private?  To only be
+accessed by the current owner.  What about transfer?</p>
+<p>Title Deeds look like they come in a PDF document.  At least the copies do.  There's no signature, only a reference
+number and the name and address of the current owner, and propery info.  I downloaded a sample.  The copy is admissable in court.  It
+said somewhere that all the previous owners are listed on the title deed but the sample I downloaded only had the
+current owner.  Further thoughts and investigation led to my conclusion that after the first transfer of property
+with the ethereum address, further transfers wouldn't need the owners name but only the ethereum address.  I don't even
+think an explicit reference number would be necessary as the contract/transaction would have its own unique reference
+on the blockchain.  I was looking into IPFS for storing/handling the PDF file.  A hash would be made of the document
+when the real property was transferred.  From then on, only the person with access to the ethereum account written
+in the Title Deed would be able to transfer ownership and any other actions for that particular property.  At the 
+moment the properties are stored in and handled in, I assume, a centralised database by the Land Registry in the UK.</p>
+<p>Who needs access, or rather who should be granted access?  Maybe all that's needed to start with is whether the 
+property record exists and what its status is - whether green, amber or red.</p>
+<p>Probably the simplist implementation of a real propery changing hands is in an auction.  Would the central function
+of propery relay, the traffic light signal, i.e. the property info and surveys, even be needed? If they are or certain
+parts are needed or preferred then it would certainly speed up the sale of the property.</p>
+<p>According to reddit (bookmarked) BTCrelay charges fees.  Means I don't have to register a separate address.  It 
+looks like the relayers get fees not the developer(?)  I think you put a charge in the contract?</p>
+<p>Description of Poperty?  More like are all the certifications in place? Legal and accounting.</p>
+<p>Maybe you can do an auction for fees</p>
+<p>If one of the objectives, or outcomes of this project was to build a social network for home owners I dont' see 
+a problem with scaling, as usage, and benefit, can occur between as little as two parties only.</p>
+<h4>Page 2</h4>
+<ul>
+<li>credit check - is this relevant?</li>
+<li>mortgage fees - links to crowd funding? (Peer 2 Peer lending.  I was thinking that instead some app or function
+aggregates all the individuals deposits and all the indvidual mortgages.  Therefore spreading the risk.  But 
+this would be similar to a dervatives product?)</li>
+<li>calculation of stamp duty - but the bands and amounts may change from year to year, or government to government.
+(Further thoughts: I think a smart contract specifically handling stamp duty, or maybe other tax, fees, expenses could
+be called from the main contract. Contracts can call other contracts.)</li>
+</ul>
+<p>Estate agent fees are usually 0.5% to 3% plus VAT of the selling price for sellers.  Would a propertyrelay dapp save
+that money?</p>
+<p>Maybe a mix and match do it yourself services is what property relay can offer.  What is the travel website where you
+choose your flights and accommodation separately? </p>
+<p>The survey: How would this be stored/handled in the dapp?  Upload file: PDF? and make sure its signed by surveyor?  PDFs
+can be signed.  Needs to be dated.  And what about expiry or renewal?  What constitutes a change in the real properties 
+circumstances? (Maybe a hash of the PDF can be made.  How acceptable would this be to rics?)</p>
+<p>Doesn't each record have a timestamp already baked in?  A timestamp is needed for each record. (so that document order
+precedent can be established.  And if a time limit on a document or its contents is required.)</p>
+<p>RICS offer a condition report, homebuyers report and there is a building or structural survey.  There is a condition 
+report pdf sample document online. (Not filled out)</p>
+<p>Could you provide an API and/or an upwork type offering that provides photo takers, floor plan designers etc. e.g. the 
+jobs people need to do in the process of selling the property.</p>
+<p>Yes, information is main focus of propertyrelay. (No not necessarily.  There are many interlinking and dependent factors
+that are required.) For example photos need things like number of photos image width and
+height, labels, download form display html etc.</p>
+<p>Then there is price of property  You could cross reference with things like mortgage, ask pice, actual price, with 
+improvements like bathroom or kitchen or external things like school.</p>
+<ul>
+<li>revenue/fee sharing with RICS</li>
+<li>permission based access (referred to above)</li>
+<li>the property is the record.  The owners are 'just' fields in the record (i think there are two different things going on with 
+this statement and the purpose of property relay. property relay would process the transaction between the buyer and seller
+using the the green tick gained from the property record.) </li>
+</ul>
+
+<p>where do you get the proof of property ownership?  and how do I make sure its the owner modifiying/creating the record?</p>
+<p>Land Registry has centralised records of land and property ownership in UK.  They also provide price data.  
+Doesn't have to be owner to access this data.  Could I link to their website? (At the moment they are linking to a Case
+Management System(CMS) I think, designed for laywers.)</p>
+<p>Could a smart contract link to the property record? (not yet. see CMS referred to above.  and also requires payment for 
+access to one record.) and when money is paid the 
+contract updated to new owner or rather adds the new owner to the property record.  Land Registry has open data but can't 
+find API for  access owner records.</p>
+<p>Has RICS got a database of condition reports?  And are the completed reports in hand writing or text/print? (important
+if making a hash of the document.)</p>
+<h4>Page 3</h4>
+<p>Maybe I should offer a service that pulls data from all  the different sources or notifies user/requester that certain
+info doesn't exist and offers to get it.</p>
+<p>Aim: to streamline real property transfer. Enable peer 2 peer transactions of real property.  May affect middlemen
+such as solicitors and estate agents, banks and government.</p>
+<p>How do you link the owner to ethereum account?  (so that the buyer pays the right person). A possibiltiy is that the
+first person to sell the property in this process has a person check.  Basically a Know Your Customer(KYC).  The buyer 
+would then hve his ethereum/bitcoin address put on the title deed and this would be used solely for further transers 
+of that property.  Once the 
+title deed is stored with the ethereum address on it on the blockchain, the smart contract can be coded so that only the person with that 
+ethereum account address can sell the property.  The title deed could then have a chain of ethereum addresses on it.  
+How I see it there wouldn't even need to be the name of the owner on the title deed, only the ethereum address.  But
+would this be desirable, by government for example. But the process for KYC is labouring.  Passport photo, utility bills
+and council tax bills.  And would banks or a company such as Coinbase provide the KYC 
+service.  I think the government would be the preferred way to do the inital association between the home owner and 
+the ethereum address.</p>
+<p>This can be done because there are no chargebacks.  But what if the buyer uses currency (bitcoin/ethereum) that isn't 
+his or acquired legally.  I think there are similarities to other payment methods.  Laws and regulation would have to 
+be designed to cover these possibilities.</p>
+<h4>Notes made from 31 March 2016</h4>
+<p>Coinbase provides an API for its bitcoin service.  Coinbase has already done the KYC checks.  Buyer pays BTC to address.
+BTC relay identifies payment and then smart contract puts buyers name and BTC/ETH addresss on title deed.  Coinbase has
+a check/list account transactions.  So I suppose similar to BTC relay.  Can be found on Coinbase Developers website.
+Permissions</p>
+<p>The current owner of the property, linked to their bitcoin address has control of access to their property record.  They 
+can choose to release the property record to those who request it. (But can they?  Are records on the blockchain and IPFS
+ private or public?) The owner could chose what to release.  For example a green tick that represents that all is in order,
+ or a checklist or the whole propery record.</p>
+ <h4>Page 4</h4>
+<p>floor plans: metropix.co.uk; android apps: floor plan operator; stanley floor plans - pdf option.  No central repository
+of floor plans exists for real property.  How could I persuade estate agents to give me their records? (What motivation do
+they have to release their records? None?  Maybe that could be a service they can still offer?)</p>
+<p>Title register, title plan and flood risk: the land registry has on 'Business e-service' to access the above 3 documents.
+But it interfaces with a case management system (CMS) which I think is:  It looks like the term CMS is athe land registry 
+and business e-service using the existing solicitors and legal system.</p>
+<p>'Eclipse Legal' is one company that offers CMS to interface with e-service called Proclaim. www.eclipselegal.co.uk.</p>
+<p>This maybe complicated. (The problem is getting the buyers ethereum address onto the title deed.  Once it's on 
+transactions between buyer and seller are a lot easier.)</p>
+<p>Maybe I should focus on coinbase and a smart contract.  Maybe not needed buy verify buyer to bitcoin address (although
+anybodies payment is good) but also verify funds.  Then use BTCrelay to verify bitcoin payment. Then update title deed with
+buyers name and bitcoin address.  Also verify seller including ownership (which can be done through coinbase again).</p>
+<p>Note:  It looks like the banks are using their own solution rather than ethereum.  A kind of pseudo-blockchain.  This 
+muddies the waters (obfuscation?) of the path of the use of this technology (ethereum?).  I don't rate their solution.  But 
+questions path and use-case of ethereum.  Maybe government services use transfer. e.g. id cards, property records, voting, 
+census etc. (Non critical).</p>
+<p>re coinbase: A coinbase bitcoin transaction can be read by a 3rd party website (or App?) through the use of notifications
+and Oauth2.  This could then activate a smart contract that says ownership will be transferred to the owner of the payee of
+bitcoin.</p>
+<p>Simplified payment transaction:</p>
+<ul>
+<li>seller sets up a smart contract</li>
+<li>buyer sends bitcoin to address</li>
+<li>contract is executed</li>
+</ul>
+
+<p>{Real property/ethereum/bitcoin transaction diagram. (implemented on main web page index.html)}</p>
+<h4>Page 5</h4>
+<p>{4 stage arrow diagram. (i missed out the first step (verifying buyer and seller) and missed out propertyrelay step)}</p>
+<p>In any transaction there is a buyer and a seller. connecting propertyrelay.org blockchain, smart contracts and dapps technology
+and real world transactions.</p>
+<h4>Notes made from 9 Apr 2016</h4>
+<p>I've copied the above diagram to website but it has one glaring omission.  The buyer and seller need to be verified. (This
+is partly true after looking at it.  Actually the verification only needs to be done once. (How I understand it anyway). But
+this is one of the hardest steps i.e. getting the property process onto the blockchain.  The other omission is the
+role of property relay. doh! lol)</p>
+<p>Having read through my notes I need to verify the buyer and seller.  This could be done by Know Your Customer (KYC).
+Basically coinbase at the moment. (Seller verfication need extensive investigation.  The buyer can include their 
+ethereum account number and maybe their name in bitcoin transaction using OP_RETURN code. Seller is much more involved
+becuase it is basically replacing the land registry service.)</p>
+<p>0. (The new first step in arrow diagram) Establish sellers ownership of physical property. 0.5 Verify link between
+real world buyers identity  and their bitcoin address. (Now I think just the ethereum address is needed, but probably
+name as well would be helpful.)</p>
+<p>Property Relay - with the circular economy, property ownership is always in flux, passing from one person to the next during
+its useful life.</p>
+<h4>Notes made from 11 Apr 2016</h4>
+<p>There is so much I'm trying to do or cover that it's getting very muddled as to what propertyrelay.org actually does.</p>
+<p>How to verify buyer?  Could an email be sent by buyer to link name and identification details to bitcoin address to the 
+seller of property? before the payment is made from that address?(This has been superceeded by knowledge of the OP_RETURN code.)</p>
+<ol>
+<li>Seller writes contract, or condition, that will put buyers id and bitcoin address on contract.</li>
+<li>Buyer sends details to seller or fulfills terms of (1).</li>
+<li>Seller writes contract that says he will transfer title deed to buy to buyer in (2) if smart contract BTC relay  verifies 
+bitcoin transactions.</li>
+<li>Buyer sends bitcoin transaction.</li>
+<li>Contract executes.</li>
+</ol>
+<p>Can one contract write another? (Yes)</p>
+<h4>Page 6</h4>
+<p>And if you have the bitcoin address and buyers identity do you need BTCrelay to confirm bitcoin transaction? (I think
+you need BTCrelay.)</p>
+<p>(1) is equivalent to exchange of contracts.<br />(3-5) is equivalent to payment and exchange of ownership.</p>
+<h4>Notes from 6pm 18 April 2016</h4>
+<p>Uploaded index_arrow_test...html to ecowebhosting</p>
+<p>Solidity docs - a contract can 'create' another contract.</p>
+<p>There is also the chain to think about.  As in the property chain, not the blockchain, the chain of buyers and sellers.</p>
+<p>Eventually all that would be needed was control of the private key.  Access would be granted with proof of private key.  So
+no need to put name on titledeed?</p>
+<p>The ownership of a property on blockchain would be determined by a chain of ownership registered on the blockchain.  Each
+ownership entry of a property would depend on the previous entry, all the way back to 'patient zero', or the first record of
+that property.  Therefore the first entry and how it's handled is important and different in nature to subsequent records.</p>
+<p>The new record is only valid if property up for sale (Yes/No flag) and recieved at least the market going rate.</p>
+<p>Also 'chain of title'. This is what it's called. (Arrows to previous four paragraphs.)</p>
+<p>For linking bitcoin to ethereum account:</p
+<ul>
+<li>look at bitcoin to see if an ethereum address can be added as msg.</li>
+<li>look at BTCrelay</li>
+<li>see how etherum trading Dapp sends Ether in contract after bitcoin confirmed. (EtherEx), Ether Exchange.</li>
+</ul>
+<p>Bitcoin tx can contain message of 40 bytes (I think 80, not 40) in 'op_return'. Ethereum address is 20 bytes.</p>
+<p>Github: blockai/raw-op-return &nbsp; &nbsp;&nbsp;posts and reads/gets op_return contents.</p>
+<p>Gets op-return from transaction id.  This is node.js.</p>
+<p>Ethereum question: can the ethereum contract have data added to it at runtime?  reason - related to op_return
+contents, the ethereum's address of the buyers account.</p>
+<p>Access modifier.  Owner of record would get permission to interested parties to view record.</p>
+<p>(Answer to Ethereum question above:) Info can be passed to contract. (I think this is done through raw transaction
+passed as parameter to processTransaction() function at address of relevant contract. Resource reference:BTCrelay at
+github readme.)</p>
+<p>There are 3 possible projects here: A social network, the property relay (uses a traffic light system like RICS, like
+HIPS) and the 3rd is the transfer of property info on blockchain.</p>
+<p>Blockchain, Property chain & chain of title deed.</p>
+<p>What about stamp duty? contracts can call other contracts so maybe a predefined/calculated fee could be deducted (or
+added).</p>
+<h4>Page 7</h4>
+<h4>Notes made from 28 Apr 2016</h4>
+<p>What if there is only the ethereum address and property adrdress on the property deed?</p>
+<p>For protection form unauthorised property transfer multisig could be used.</p>
+<p>Each deed has a uniquie reference number.</p>
+<p>How about mortgage co's posession of deeds until the mortgage is paid off.  How would that work?</p>
+<p>Would banks, traditional mortgage lenders, still be relevant?  Replaced by crowdfunding and/or derivatives so no one
+lender is exposed to one borrowers liability?</p>
+<p>Section on property. i.e. property chain and chain of deed.</p>
+<p>Section on banking.</p>
+<p>Implement basic transaction.</p>
+<p>The transaction could be compared, timewise, to an auction. (quick)</p>
+<p>Affected: Government, banks, solicitors, estate agents.</p>
+<h4>Notes made from 8 May 2016</h4>
+<p>Combining a title deed with ethereum account.  The owner would be anonymous if no personal info was given.  Could
+a DAO or contract verify an ethereum account associated with a property (home)?</p>
+<p>Maybe time based/limited and token based access like oauth2.</p>
+<p>To verify an account just do something with the account.  e.g. send a transaction with name attached or write a smart
+contract that gives owners name to an interested party at a specific or non-specific account.  To reduce the possibility
+of compromise use multisig.</p>
+<p>Include in website: The ethereum account number can be put in the text field(op_code) of the bitcoin transaction.  In
+fact Satoshi Nakamoto use this field to put the following msg: banks ...bailout...</p>
+<p>A contract can call another contract, so stamp duty and council tax can be paid.</p>
+<p>I think not having an identity associatedwith a property is a bit dehumanising.  Language is important and it was
+a major step in the ..th century to progress just signing a document with an X to a person's signature of name.</p>
+<p>Webpage titled:</p>
+<ol>
+<li>Ethereum as payment mechanism/vehicle.</li>
+<li>Dapp process showing transaction process.</li>
+<li>Auction(This could be done in solidity) process (without property relay)</li>
+<li>Selling home with property relay step.</li>
+</ol>
+<h4>Page 8</h4>
+<p>The OP_RETURN field in the every bitcoin's transaction header can be used to store the buyers ethereum address.  This 
+address can then be added to the title deed as the new owner of the real property.</p>
+<h4>Notes made from 18 May 2016</h4>
+<p>Associating a real estate property with an ethereum account:</p>
+<p>This is one of the major steps needed to complete the transaction.  This step needs to be done once. (Like an init(); 
+function) for each property.</p>
+<p>The way I see this happening is the property owner fills out a form on the land registry website requesting that
+they want to associate an ethereum account with their home.  The government agency then sends an ethereum keystore
+(address(?)) to the owner at their home.  This info is protected somehow.  For security maybe the owner does a contract
+to send to a new account/keystore(?)</p>
+<p>((As of 30 jun 2016).  I think a method has been found related to above paragraph about associating a property with
+an ethereum address.  The land registry registers a change in ownership through a form.  TR1 or AP1.  This form
+could be sent with the ethereum address.  The land registry then adds this info to a database specifically for the 
+purpose of associating ethereum addresses with property.  Then when a real property transaction takes place this 
+database is used to establish relationship.)</p>
+<p>(A further step to do this initial check is for the owners to send a small token amount of bitcoin to the land registry.
+This transaction references the ethereum address, property address, and maybe name. This needs more thought.  Don't think this
+is needed.  Just means there needs to be a special case when dealing with the first transaction of real property.
+Although this step would associate bitcoin address with property.  Maybe the owner sends their bitcoin address with AP1 form 
+as well (Yes).</p>
+<p>Once this initialisation is done then the chain of accounts can be done without the need for a 3rd party.  This situation
+can be likened to bitcoin. In order to regulate the flow of bitcoin and associate transactions with individuals gatekeepers 
+have been established. (for KYC and AML)  Mainstream goods are not denoted in bitcoin but in fiat (currency).</p>
+<p>This is speculation.  Needs more thought. (paragraphs 1 and 4 above).  (Since then contacted land registry and downloaded
+AP1 form and understand this more.  Paragraphs 2 and 3 above is the solution to initialisation as I see it.)</p>
+<p>As Morpheus in the matrixs says: "They are the gatekeepers.  They hold all the [keys]?" (referring to agents.  Then
+negative.  Now in usage for example Superintelligence and Ethereum etc not so negative.</p>
+<p>Government has been necessary, and the law for enforcing property rights.  Also Gov is lender of last resort.  Fed
+created after crash.  Also mention J P Morgan or Rockerfeller stood as guarantee after crash.</p>
+<p>Crowds are good in some respects, like crowdfunding for Oculus Rift, later bought by facebook, but they also are bad, 
+[Newtons quote 'madness of crowds' regarding the South Sea bubble.]</p>
+<p>To get raw transaction use blockr.io to get transactions from address.  Then get raw transaction. Not a great solution.
+Still have to copy and paste address.</p>
+<p>For an auction try adapting code I've seen!  It's basically:<br/>
+if(time < timeLimit)<br/>if(bid > currentBid)<br/>currentBid = bid<br/></p>
+<p>Sure the code I'd seen was voting, Maybe DAO code.</p>
+<p>Transaction - get raw transaction from blockchain:</p>
+<ol>
+<li>Offer input box to input users bitcoin address;</li>
+<li>Return all transactions from that address and make one selectable by user;</li>
+<li>Use blockr.io api raw transaction api to convert transaction to raw transaction;</li>
+<li>Use raw transaction to pass to BTC relay.</li>
+</ol>
+<p></p>
+<p></p>
+<p></p>
+
+<p>Email: info{@}propertyrelay.org</br>
+Twitter: <a href="https://twitter.com/propertyrelay" target="_blank">@propertyrelay</a></br>
+Github: <a href="https://github.com/propertyrelay" target=_blank">propertyrelay</a></p>
+</div>
+</body>
+</html>
+
+
+ 
+
+ 
