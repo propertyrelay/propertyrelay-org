@@ -324,8 +324,37 @@ if(time < timeLimit)<br/>if(bid > currentBid)<br/>currentBid = bid<br/></p>
 <li>Use blockr.io api raw transaction api to convert transaction to raw transaction;</li>
 <li>Use raw transaction to pass to BTC relay.</li>
 </ol>
-<p></p>
-<p></p>
+<h4>Page 9</h4>
+<h4>Notes made from 05 June 2016</h4>
+<p>blockr.io has address API that returns last 200 transactions for given address.</p>
+<p>Government (UK) is planning to privatise the land registry.  How does this affect property relay?</p>
+<p>Coinb.in api</p>
+<p>IPFS</p>
+<p>Currency conversion: BTC/Dollar/Pound</p>
+<p>Do a check for 200 and 4 for API call.</p>
+<p>Do an address format check in javascript.</p>
+<p>Raw transaction from tx in blockr.io</p>
+<p>bitcoinjs.org</p>
+<p>form validation - <br/>
+Amount - Is it the right amount i.e. equals price of property?<br/>
+Bitcoin address: right length.  See bitcointalk.org forum post.</p>
+<h4>Notes made from 11 June 2016</h4>
+<p>Things to do:</p>
+<p>Add USD and GBP amounts for each tx bitcoin amount.  Use blockr.io for USD amount conversion.  Only use API once and
+then use that variable for rest of txs.  Use Yahoo finance for GBP converison.  There's a github page for doing this.
+'henrik' in bookmarks.  Probably need table for display and format of these quantities. Div elements would be too risky.
+i.e. amounts may not be in the same rows. (Done as of 30 Jun 2016, in json_get.html.  No need to use Yahoo.  Currencies
+provided in blockr.io API currency call.  Had to remove form element to allow multiple buttons.)</p>
+<p>Use blockr.io api for raw transaction. from transaction in value in radio button above. (Done)</p>
+<p>Change submit button to button. Add another button for transactions and radio buttons. (Done.)</p>
+<p>For transaction index parameter in relaytx() get block number from API call referencing time of block after unix time.
+This requires transforming UTC time in txs listed through Address txs, to unix time. (No need to do this.  Should have
+checked BTCrelay example on github. '.../examples/testnetSampleRelayTx.html' for code for the relaytx().  This shows
+how to get all the parameters for this function including get block number from block hash from raw transaction.)</p>
+<p>Get blockhash from block number got in above step. (Unecessary. see above)</p>
+<h4>Notes made from 12 June 2016</h4>
+<p>Use some github bitco.in (think i mean Coinb.in website)code to create dapp client side code for wallet functions and to 
+send transactions.</p>
 <p></p>
 
 <p>Email: info{@}propertyrelay.org</br>
