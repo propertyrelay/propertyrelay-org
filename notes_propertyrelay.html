@@ -355,7 +355,301 @@ how to get all the parameters for this function including get block number from 
 <h4>Notes made from 12 June 2016</h4>
 <p>Use some github bitco.in (think i mean Coinb.in website)code to create dapp client side code for wallet functions and to 
 send transactions.</p>
+<h4>Page 10</h4>
+<p>Paul Downey - UK Government Digital Service</p>
+<h4>Notes made from 27 June 2016</h4>
+<p>Received reply from land registry.</p>
+<p>Made me think about how to prevent anyone making a false real property record on the blockchain.</p>
+<p>A solution (maybe): The government keeps a record of the first instance of the real property put on the blockchain.  For
+example the record could be a hash of the record, including the unique identifier the government uses and the ethereum
+address associated with the property record. (07Jul16, either a bitcoin payment or ethereum payment is associated with 
+contract execution and the transfer of real property title.(is contract execution recorded on the ethereum blockchain?))</p>
+<p>Once this first record is made then this first instance, (because of timestamp), would be enough to verify the 
+ownership.  Then potential buyers could do a search of the real property address and find the first record and subsequent
+owners in a chain.</p>
+<p>This would stop bad actors.  How the first ethereum address is associated with the address is still unknown. (07Jul16,
+see updated comments on page 8 section above for solution.)</p>
+<p>To ensure ligitimacy of property use: hash government has, the contract and the (bitcoin or ethereum) payment.</p>
+<p>Whats to stop anyone relaying an existing bitcoin transaction and put their name on the OP_RETURN code?!</p>
+<p>Put ethereum address, (real property) address and persons name in OP_RETURN.  (This does not solve problem.)</p>
+<p>(07Jul16, a transaction is made and recorded when a contract is called.)</p>
+<p>Poss process of sale and purchase</p>
+<p>The seller calls a contract that puts sale details on blockchain.</p>
+<p>Buyer calls a contract (different contract to above one?) with those details to purchase property.</p>
+<p>?  May still need initial step.  For example how about sending in the TR1 form to land registry from solicitor or
+conveyancer with ethereum address, (and bitcoin address?).</p>
+<p>I think the land registry would still need to provide a reference number and ethereum address in has to counter above
+situation of a bad actor trying to sell a property he didn't own.</p>
+<p>The buyer would then reference this hash code in bitcoin transaction OP_RETURN code.  Contract could then check for this
+hash.</p>
+<p>A record of the bitcoin payment and reception(?) with the ethereum address in OP_RETURN may provide enough proof of 
+legitimacy of transaction.</p>
+<p>The problem is that relying on the same bitcoin address for large transactions is undesirable (I think) but there is
+a deterministic wallet - multiple address from one private key.</p>
+<p>1) So there needs to be conditions to write contract (and sell property) (like bitcoin and ethereum address)(or call
+the sale property contract).</p>
+<p>2) And needs conditions to buy property and fulfill contract. (like bitcoin and both ethereum addresses.)</p>
+<p>These conditions can be (for 1) parameters in contract and maybe same for 2 or/and put in OP_RETURN.</p>
+<p>It would be easier to use same bitcoin address.</p>
+<p>Don't want to rely on peoples names.</p>
+<h4>Page 11</h4>
+<h4>Notes made from 26 Jun 16</h4>
+<p>so the ethereum account is bound to the bitcoin payment and vice versa.</p>
+<p>How about there is a form where person can put real property address in.  And the bitcoin is populated automatically
+from that info.</p>
+<p>The holder of the ethereum address can only submit the form.  Or the account says 'you can sell the following 
+real property(ies).  What about one owner of many real properties or many owners to one property?</p>
+<h4>Notes made from 28 Jun 2016</h4>
+<p>I'm having problems with how to prove a seller, without a person's name and a centralised database.  And using the
+blockchain technology.  The chain is proved by PoW, proof of work.</p>
+<p>Thought about merkel tree and unique reference.  Its almost like I need a blockchain for property title deeds!!!
+But the blockchain determines the first instance of a transaction.   And duplicates are rejected.  But the first
+instance on the property deed may not be the ligitimate one.</p>
+<p>If the sale can only be done by the ethereum a/c holder who has the property registered to them, then the first sale
+is the legitimate one</p>
+<p>In the 'helloworld' contract for ethereum the owner is static (msg.sender) so change that to dynamic (code): <br>
+owner = msg.sender;<br>
+&nbsp;&nbsp;&nbsp;(check for transaction code)<br>
+buyer = owner;</p>
+<p>Use blockr.io to get OP_RETURN contents of btc address/transaction.  How reliable is blockr.io. (18Jul16 There is
+a website I think called bitcoin secrets that parses OP_RETURN.)</p>
+<ul>
+	<li>reasonable price for property check;</li>
+	<li>remove seller as msg.sender;</li>
+	<li>could buyer sell property back to seller or onto another person.  Possible money laundering, flipping
+	tax purposes;</li>
+	<li>how do you stop two or more people sending money for property?  Who is proper buyer?;</li>
+	<li>how to return bitcoin to unsuccessful buyer(s)? (I think ethereum contract locks payments and then returns 
+	them. see auction contract code example.  (Think on github:google it.));</li>
+	<li>how to lock contract once activated by first legitimate buyer.;</li>
+	<li>how would you ensure the desired contract is called? not one from bad actor?</li>
+	<li>I think you can verify proper sale and purchase of property by verifying link between contract, ethereum
+	account and payment (via bitcoin).  As long as a transfer is linked with payment it is ok.  This is done through
+	OP_RETURN on bitcoin side.  How on ethereum side?;</li>
+	<li>timestamp of bitcoin transaction that was relayed;</li>
+	<li>the first owner in the chain could send a token amount of bitcoin to the government to get the ball
+	rolling and the owners on blockchain;</li>
+	<li>there need not be any time limits.  Well, no immediacy;</li>
+	<li>what does the contract do?  Put the ethereum address, the seller's bitcoin address when they bought,
+	the amount and exchange rate at time, in a PDF doc on IPFS;</li>
+	<li>Both bitcoin transaction and ethereum address needed to be linked and the next sale transaction
+	and other transaction info in chain to execute and be valid.</li>
+</ul>
+<h4>Page 12</h4>
+<ul>
+	<li>what happens if there is a big difference between two consecutive transactions.  For example the first. 
+	(which is a token gov. transaction.) Or if there are many years between purchase and sale? (25 July 2016:
+	maybe use AI to get the average, minimum, median price for that postcode/area.);</li>
+	<li>what about slippage? due to volatility in bitcoin price.  It may be desirable to check amount for 
+	exact amount when verifying previous transactions for sale of property;</li>
+	<li>how is fluctuation of exchange rate between bitcoin and fiat currency to be handled? How do cross 
+	border transactions of property using currrency done?</li>
+</ul>
+<p>Does the seller need to write <underline>and/or</underline> call a contract? (25 July 2016: I still don't
+know how this will work.  The seller will probably call a contract that is already written and defined.  But how
+do you diferentiate between the different sellers that call the contract? In EtherEx there is msg.sender.  So there
+must be many msg.sender(s) in contract.  How do you valididate sellers property?  Where does the post office get
+its property address database details from?  How do sellers list their assets for sale on EtherEx?) 
+(Check how etherex does it, for example.)
+What about the buyer? (25 July 2016: EtherEx deals with financial assets, not a physical object, like property.
+Etherex is a contract where Ethereum account holders can send Ether to the contract.  This balance can then be used to buy
+other exchange for other currencies. (Maybe expanded to other asset classes (How?)))  </p>
+<p>To solve the chain problem, the insertion of a fake real property transaction, add the previous bitcoin address/
+txid(?) to OP_RETURN field.</p>
+<p>-on the ethereum side, seller needs to say 'If you send to this bitcoin address contract will execute'.  so you
+have a binding between ethereum and bitcoin on the sellers side.</p>
+<p>To solve the 'origin' problem - the need for the government to maintain a centralised database - or the records
+on swarm - is to have a hash of the whole database (all 25 million records!) and include that hash in each record/
+transaction afterwards.  The quantity of transactions and the other checks reduce(?) forgabiltiy - e.g. large price
+of property and time stamp.</p>
+<p>21.co (website) is saying a hash of info e.g. ethereum address be put in OP_RETURN.   Only 80 ascii characters,
+equals 80 bytes.  Mentions proofofexistence.com.</p>
+<p>OP_RETURN is a transaction output in a transaction.</p>
+<p>Consider using 'decode' part of blockr.io API.  For getting OP_RETURN value.   Make POST request.  I think this is
+for when you have the hex value? (25 July 2016: coinsecrets.org has an API for OP_RETURN)</p>
+<p>blockchain.info/decode-tx for converting raw transaction</p>
+<p>who calls BTCrelay? buyer or seller? (25 July 2016: think the buyer calls it.  Would be done by contract?)</p>
+<p>To see how propertyrelay dapp may function check out dapps/io's(?) such as the art co. can't remember name (25
+July 2016: ascribe.io)</p>
+<p>Buying/Selling process:</p>
+<p>Buyer sends bitcoin to sellers bitcoin adddress specified in sellers ethereum contract.  Buyer includes their
+ethereum adddress (in OP_RETURN of their bitcoin transaction).  Buyer becomes new owner.  New owners ethereum 
+address is put in swarm or held in 
+contract's data along with bitcoin address and transaction.</p>
+<p>Only owner with ethereum address and bitcoin address can sell.  New buyer, Dapp checks bitcoin sent to address
+and ethereum address. (01 Aug 2016: still working on understanding process.  But seller wouldn't create contract,
+but call one already specified.)</p>
+<p>How does a contract store data,state? (01 Aug 2016: a contract can store data, from how I read the EthexEx 
+contract on github (see the trade and balances arrays, but I think storage in this manner is expensive. (Costs gas).
+I think the best way to do this is to save the real property details in a database (swarm or ipfs), and use
+ the contract for the listing of all property for sale.)</p>
+<p>Still don't know how contracts would work in property sale scenario.  How does the contract get written or called
+by the seller.  If called/invoked how? or written how?</p>
+<p>A contract is an account.</p>
+<p>The contract can be called from owners account.</p>
+<h4>Page 13</h4>
+<h4>Notes made from 13 July 2016</h4>
+<p>Need continuity.  Need a way to find transactions for each real property.  Would a cut off timestamp for initial
+registration of real property with the government work for proof of, or continuity of real property ownership.</p>
+<p>Sidechain?</p>
+<p>You can have only one owner, (I mean account), or a real property at a time.  So there is only one instance of a 
+property.* So only one person can sell it</p>
+<p>*But do you really want to search the whole blockchain or 25 million records to see if there's a duplicate? Vector(?)
+search are a bit faster.</p>
+<p>What about the ethereum address sent to the government then hash made and then both put on blockchain along with 
+other 25 million in a verified file.  But that means doing all records at once.  Maybe allow append to file. (More thought
+needed.)</p>
+<p>Just dump gov database on blockchain swarm or ipfs.  (Needs further thought.) e.g. can the database record be deleted. 
+Want to prevent that.</p>
+<p>(Other:) Would accounting be suitable to AI on blockchain.  For example logisitic regression (multivariate?) to put
+different transactions in proper ledger?  There was something on Twitter who have used AI for accounts.  Validated or 
+labelled data?</p>
+<p>Say on IPFS file has one real property record.  Then the hast of that record could be compared to a hash value put 
+together from the users account side. So: <br/>
+if (ipfshash == accounthash)</p>
+<p>so if hash of record = 123456.  This hash contains for example property address and ethereum account number of owner.
+(and bitcoin address) and name?  Then use msg.sender and property address in a string to compare to the hash, 123456.  
+If it matches the owner of that ethereum address can take action with that record.</p>
+<p>There is still issue of ownership ligitimacy, (for first instance).  Still need to compare whats on blockchain with
+what land registry has on record for first record in chain.  So for example I mention a hash above.  The land registry
+would store the hash on their centralised servers and this would be compared to reocrd on blockchain.  Maybe through
+API.</p>
+<p>Dapps/IPFS <br/>With reference to above paragraph, the hash would not be threatened from a bad actor <u>if
+</u> the Dapp is able to be verified, and bad actor Dapps are prevented from operating <u>AND</u>
+the Dapp calls the IPFS file.</p>
+<p>IPFS has a node (account(?)) with a public and private key.  So only content from that public address could be 
+accessed by Dapp.  Meaning that only land registry could have control of that a/c / node.</p>
+<h4>Page 14</h4>
+<p>API: find out how one would be created and how it would work with land registry or a database.  whats to stop
+the first user registered on the land registry from selling the property more than once?</p>
+<p>EtherEx(?) - for buyer becoming next owner.</p>
+<p>IPFS - how multiple people (buyers/sellers) access/change one a/c in IPFS?</p>
+<p>Todo: check how dapps are served.  Through mist? What is the Dapp equivalent of Google Play and Apple App Store?</p>
+<p>Dreamfactory API creator from SQL database. search 'REST API'. maybe too heavyweight for needs.</p>
+<p>www.getaddress.io - address lookup, but it probably gets its info from the land registry. lol.</p>
+<p>PAF by royalmail.com (looks like all address lookups originate from this source.)</p>
+<p>You've got a hash, or just a/c number stored of current owner.  Only when info inputed equals/produces a hash
+equal to the present one does the transaction execute.</p>
+<p>This on its own (by itself) still doesn't stop a bad actor injecting his property record and its hash.  What about
+the hash containing the propery info, account etc <u>and</u> previous hash.  Maybe the previous transaction id instead 
+put in next hash.  Maybe a counter included in hash to say how many times property sold.  And a separate property 
+ref counter.</p>
+<p>A counter can be used (or true/false boolean) to be included in contact and hash to say an account has already sold
+the property.</p>
+<p>The hash of each previous real property transaction going back to the first hash in the government database is put
+in the most recent transaction. (basically a merkel tree!)</p>
+<p>A list of hashs of all transactions concerning the real property.</p>
+<p>The first instance is important.  Could there be a way of the land registry owning an account (e.g. ethereum, swarm 
+or ipfs) that only it can write files? (e.g. property records).  In that way property origin is guaranteed and the 
+subsequent hashs could point to one of these (25 million records) files.</p>
+<p>Thats the property side (sales side) of the transaction (and call of the contract). What about buyers side?  The
+buyer would need to send the ether to the contract, (or bitcoin to sellers bitcoin address).  This would create a 
+transaction.   This transaction could be included in subsequent sales of the property.</p>
+<p>The land registry lends itself to blockchain because it is database based and the title deeds can be generated
+programmatically (in the form of a pdf document).</p>
+<p>How would a record/real property  for a new property be added?  The way the database on the blockchain is
+initialised and subsequent transfers is very important.</p>
+<h4>Page 15</h4>
+<p>This solution deals with the <u>transfer</u> of property.  Need more thought on new builds and conversions i.e.
+new real property to be added to blockchain/database.</p>
+<p>The ethereum a/c address and bitcoin address would be added to AP1 and added to database.</p>
+<p>Along with list of property transactions also have list contract calls of ether transfers for each property.</p>
+<p>'Estonia has an electronic land registry...reducing land transfers from three months to a little over a week.'
+Blockchain Revolution, P198.</p>
+<p>Mention article on Sweden www.bitcoinmagazine.com, 'Sweden conducts trials of a blockchain smart contracts 
+technology for land registry' (Title of article)</p>
+<p>Reduces time to day adn reduces fraud.</p>
+<p>However this solution uses 5 participants: buyer, seller, solicitor, land registry and banks.</p>
+<p>What about taxes on the sellers side e.g. CGT (Capital Gains Tax?) could be a flag to indicate payment or not.</p>
+<p>What happens if someone loses their private keys, password? dies?</p>
+<p>Process for putting records on blockchain. Owner sends amended AP1 form.  Land Registry uploads that file to 
+blockchain.  If IPFS then land registry only has access to that a/c.</p>
+<p>My solution doesn't assume the financier would automatically be a bank, and that a solicitor would not necessarily be 
+required.</p>
+<p>If multiple properties listed under 1 name then appropriate tax can be taken.</p>
+<p>What does an ethereum transaction consist of? to a contract and another a/c?</p>
+<p>There is the option of multisigniture as one solution to loss of private key.  But this could nullify the advantage
+of a blockchain.  For example have 3 key holders with m-of-n is for example 2 of 3, and a solicitor (curator) holds one,
+the land registry holds another and the owner holds the 3rd (or a bank or financial backer holds one) but owner loses
+control.</p>
+<p>Or sign in sites like google have back up methods like another email address or a phone number.</p>
+<p>If the multisig is used, with a bank or arbitor then does this negate the immutablity and peer to peer reason for 
+using the block chain in the first place?</p>
+<p>Because the blockchain  is immutable storing the history of all the owners of each property it is necessary to have
+the contract save state i.e.. the present owner of the property.</p>
+<h4>Page 16</h4>
+<p>The contract can only ever hold the total number of property records if state recorded in contract, no matter how
+many times the property is sold.</p>
+<p>External transactions pay contract gas.</p>
+<p>Transactions can store data in data field? Answer: of 89kb as of Feb 2016.</p>
+<p>A contract can store 2^261 bytes (V. Buterin. Stack Exchange.) so an address or hash could be stored in the contract
+for each of the 29 million property records.</p>
+<p>Is an ethereum address 20 bytes? (I think so). hash is 32 bytes?</p>
+<p>The new hash contains the previous hash, the new owners ethereum address and the real property address, (and maybe the
+owners name).</p>
+<p>The data from this hash can be put together and taken apart by Dapp(?)</p>
+<p>Verified Dapp. Advisable.</p>
+<p>Multisig - more thought needed how it changes model.</p>
+<p>How can you link the sellers ethereum address to the balance in the contract paid by the buyer?</p>
+<p>Could the unencoded contents of each hash be put in the data part of the transaction so that the hash can be created
+from that data and therefore without an outside database.</p>
+<p>You can run the new and old system in tandem (to a certain extent).</p>
+<p>Hash is of string or JSON or ? ?</p>
+<p>It is a peer-to-peer paradigm.  No 3rd party.  Introducing a centralised dependency would negate this use.  But yes
+loss of key or a death of owner would require more thought.  For example Mark Zuckerberg created a control(?) structure
+for his board of five seats. 3 seats for himself and 2 for others.  This format could be translated to multisig.  Maybe
+one of the owners keys, the 5th key, could be owned dependent on law.   So in case of dispute (like foreclosure) the key's
+ownership could change.</p>
+<p>Saving data in the transaction removes need for centralised database.</p>
+<p>A memo was released on 8 Aug 16 by Tony Scott, Whitehouse CIO, about open sourcing software.</p>
+<p>The origin problem: maybe if identities were introduced for selected organisations.  (There's coinbase etc that do this.)</p>
+<p>The land registry has 1 account/ethereum address linked therefore its identity (and solves origin problem)</p>
+<p>Multisig is like 2 factor authentication.</p>
+
+<h4>Page 17</h4>
+<h4>Notes made from 10 Aug 2016</h4>
+<p>For the control regarding collecting tax.  Use setters and getters.  The land registry would use a setter every year and 
+the seller would use the getter.  What about storing getter (16Aug16: don't you mean setter) variable?</p>
+<p>The paper doesn't consider transfer between crypto currencies and fiat currency, but there are intermediaries like 
+coinbase that do this, addressing KYC and AML.</p>
+<p>This paper doesn't include other activities of land registry  but these could be off chain/integrated on chain or
+added modules.  Could ether a/c, private key be used to verify owner for making changes to property details.  How would 
+that work?  Send a transaction to LR ethereum address with relevant data in it or to an LR contract.</p>
+<p>Transactions are not reversible.  Ethereum is quite inflexible.  Can you add contracts to an existing contract?</p>
+<p>The purpose of the land registry is the registration of land and property.  This is guaranteed by the government.</p>
+<p>Registration, when first introduced was not compulsory.  My method is the same (not compulsory).</p>
+<p>When ethereum includes SPV, Mist can run in a browser on a mobile phone.</p>
+<p>Ebay uses stars for reputation of seller and can use charge backs from credit cards (& paypal?)</p>
+<p>A smart contract is like a traditional contract in law (sort of). It has offer, acceptance and consideration.  So
+could existing law cover smart contracts.</p>
+<p>Is there a need for government guarantee if contract is stored on blockhain?  (see 'Law of Bitcoin' book)</p>
+<p>The advantages are substantially quicker property transactions, the prices of property are high and are valuable
+so any blockchain reord needs to be secure adn well thought out.</p>
+<h4>Page 18</h4>
+<h4>Notes made from 12 Aug 2016</h4>
+<p>You could use linear regression to give an estimate of property prices.  And use this to check the sellers listing
+price.  Make sure they don't sell for a penny.  Although there migh be exceptions.  For example sold for a (token
+amount of a) £1.</p>
+<p>-2^261 hashs of records so millions of records doable.</p>
+<p>-sha3 method inside contract (solidity) so hashes can be compared. (16Aug2016: for example a hash stored in a contract
+ can be compared to the sha3 encoding hash of the msg.sender address and some other data, for exmaple a real property 
+address, so that only the proper owner of ethereum address can perform action regarding their real property.)</p>
+<p>-multisig.</p>
+<p>Scalability of ethereum question issue.</p>
+<p>'Ethereum clients maintain a state database of all contracts, which is anologous to Bitcoins UTXO set.' from
+forum.ehtereum.org, 'Understanding data storage'.</p>
 <p></p>
+<p></p>
+<p></p>
+<p></p>
+<h4>Notes made on 18 July 2016</h4>
+<p>IPFS - think this is the solution.  Just dump the whole Land Registry database on IPFS.  Implementation details
+required. (01 Aug 2016: Option is to transfer one property at a time.  That would require the land registry to have
+an account that has control over database of transactions transferred for the first time from their centralised
+database to ethereum (either swarm or ipfs).</p>
+
+
+
 
 <p>Email: info{@}propertyrelay.org</br>
 Twitter: <a href="https://twitter.com/propertyrelay" target="_blank">@propertyrelay</a></br>
