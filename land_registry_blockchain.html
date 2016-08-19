@@ -1,0 +1,96 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Land Registry Blockchain Proposal</title>
+  
+  <meta name="author" content="Tim">
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+  <link rel="stylesheet" media="screen and (max-width: 700px)" href="css/mobile.css" />
+  <link rel='stylesheet' media='screen and (min-width: 701px)' href='css/laptop.css' />
+  
+</head>
+ 
+<body>
+  <!--<script src="js/scripts.js"></script>-->
+<div class="bodyformat">
+<H2>A proposal for the Land Registry using Blockchain technologies</H2>
+<h4>Summary</h4>
+
+<p>Blockchain technologies have the potential to greatly improve the real property transaction ecosystem.
+The purpose of the Land Registry is to maintain a register of ownership of land and property in England and Wales.  Inititally the registry
+was in the form of paper title deeds and plans.  Subsequently title deeds were transferred onto
+a centralised database, where they currently are maintained.  The Blockchain is a distributed database that could transform
+not only the way records are stored	by the Land Registry, but also how ownership is transferred, among many other improvements.
+  This could significantly speed up real property transaction times, and also automate and speed up the collection of taxes.
+  (By distributed it is not refering to Hadoop.)</p>
+<p>There are two factors about the Land Registry that lends itself to the conversion to a Blockchain model.  The Land Registry:</p>
+<ul>
+	<li>maintains a register of land and property ownership in a database;</li>
+	<li>changes the state of the register in that database, representing transfer of ownership.</li>
+</ul>
+<p>These two factors, the database, and the transfer of ownership, can be implemented using the blockchain based
+technologies called Bitcoin and Ethereum.  Bitcoin is digital cash, but can be seen as the transfer of value between users.
+  Ethereum could also be seen as a transfer of value but it's main function is what's called a smart contract.  Both store
+transactions in a database, but unlike the centralised database of the Land Registry both use a distributed database.</p>
+<p>One of the main concerns about the blockchain is the removal of intermediaries.  This proposal suggests a measured
+transistion, one record at a time, not a mass migratation.  In the fashion that the Land Registry has taken in the past to
+property registration.</p>
+<h4>Basic suggestion for implementation</h4>
+<p>The form that is used to register property, the TR1 and AP1, an application to change the register, would have another
+ two fields.  One for the owner's Bitcoin
+address and the other for the owner's Ethereum address.  Both are an alpha-numberic string of characters.  Both are long,
+and are ideally, and really only, meant for cut and paste due to their length and the importance of what they represent.
+Bitcoin addresses start with a 1 and Ethereum addresses start with an 0x.  This distinction is important, so that they
+are not mixed up too.  The current Land Registry database would add two columns to include these two addresses as fields.
+Each property record would then be updated when a completed AP1 form was submitted.</p> 
+<p>With one of the Land Registry's Ethereum addresses it would call the relevant contract with the intention to transfer
+the property to the Ethereum address of the current owner.  The Land Registry would basically put the property 'up for
+sale' on the blockchain, but only the person with access to the Ethereum address that has be registered via the AP1 and
+in the Land Registry database could 'buy' the property.  The owner would send the token Bitcoin or Ethereum payment to the Land
+ Registry and the ownership would be transferred through the transaction.  This token amount could be set to cover 
+ Land Registry costs.</p>
+<p>The Land Registry's database may be distributed in one sense, but the distinction between that and a Blockchain based
+distributed system is that it facilitates transactions that require no trusted 3rd party to validate them.</p>
+<p>There is a testnet on Ethereum where all it's features can be tested before moving to the mainnet.</p>
+<h4>What is a smart contract</h4>
+<p>Register: 'an official list or record of names or items.'</p>
+<p>for title transfer and storage at the Land Registry.  
+There are many advantages of using Blockchain technology by the Land Registry.  The 4 main advantages when considering this proposal
+are:</p>
+<ol>
+	<li>Reducing costs;</li>
+	<li>Maintain a record of property titles;</li>
+	<li>Ensure the proper collection of taxes;</li>
+	<li>Reduce property transaction times.</li>
+</ol>
+<p>The blockchain and associated technologies mentioned in this paper can help achieve these objectives.</p>  
+<p>The solution to achieve these 4 main goals use two open source blockchain technologies called Bitcoin and Ethereum.  For the
+purposes of this use-case Bitcoin
+is used as digital cash, and Ethereum is used for smart contracts.  Both store their peer-to-peer transactions on their
+blockchain, which is a distributed ledger of immutable transactions.</p>
+<p>This proposal does not include how to convert fiat currency to bitcoin, or the way that the remaining
+properties on your database that have not been converted are transferred to the blockchain, or the daily operations
+ of the land registry.  This paper is about the transfer of property, and transactions and storage of the titles.</p>
+<p>Ebay anaology for explaining how smart contracts work.  Ethereum is 'if this, then that'.</p>
+<p></p>
+<p>This essay introduces one possible method for the Land Registry using blockchain technology that would improve security of data,
+reduce costs, and reduce transaction times.</p>
+<p>The Land Registry:</p>
+<p>The blockchain offers 
+a new paradigm, a new model, of how the Land Registry could function.</p> 
+<p>The technology at the Land Registry is built around the following two things:</p> 
+<p>Email: info{@}propertyrelay.org</br>
+Twitter: <a href="https://twitter.com/propertyrelay" target="_blank">@propertyrelay</a></br>
+Github: <a href="https://github.com/propertyrelay" target=_blank">propertyrelay</a></p>
+</div>
+</body>
+</html>
+
+
+ 
+
+ 
