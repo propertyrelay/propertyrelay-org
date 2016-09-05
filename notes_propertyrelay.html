@@ -519,6 +519,12 @@ API.</p>
 the Dapp calls the IPFS file.</p>
 <p>IPFS has a node (account(?)) with a public and private key.  So only content from that public address could be 
 accessed by Dapp.  Meaning that only land registry could have control of that a/c / node.</p>
+<h4>Notes made on 18 July 2016</h4>
+<p>IPFS - think this is the solution.  Just dump the whole Land Registry database on IPFS.  Implementation details
+required. (01 Aug 2016: Option is to transfer one property at a time.  That would require the land registry to have
+an account that has control over database of transactions transferred for the first time from their centralised
+database to ethereum (either swarm or ipfs).</p>
+
 <h4>Page 14</h4>
 <p>API: find out how one would be created and how it would work with land registry or a database.  whats to stop
 the first user registered on the land registry from selling the property more than once?</p>
@@ -636,17 +642,37 @@ amount of a) £1.</p>
 address, so that only the proper owner of ethereum address can perform action regarding their real property.)</p>
 <p>-multisig.</p>
 <p>Scalability of ethereum question issue.</p>
-<p>'Ethereum clients maintain a state database of all contracts, which is anologous to Bitcoins UTXO set.' from
-forum.ehtereum.org, 'Understanding data storage'.</p>
+<p>(these notes have been transferred to 'land_registry_blockchain.html' file, 'LRB' ref.).</p>
+<p>In the transaction to buy a real property there is the previous hash as a single string in the data part.  This
+is added to the buyers ehtereum account address to form a hash to store as a 32byte data in the contract.</p>
+<p>Then this info could be used with sha3 method to verify seller (previous buyer).</p>
+<p>Using the above model would require an external database - containing the real property info and hash.  Ideally
+that info needs to be on the blockchain too, in the transaction data field.</p>
+<p>But how would you get the hash from the previous transaction?</p>
+<p>What about just a hash of just hte address.  But in that ccase why not just put the address in contract?!  But 
+what about the owners with multiple properties?  1 single address reference would be ambiguous in that case.</p>
+<p>If  you had a seller of malt whisky or vintage wine you have to trust the seller that they own it an that they
+won't just disappear with the buyers payment.</p>
+<p>The blockchain has been called 'The trust protocol' by Blockchain Revolution book.</p>
+<p>Within the context of the land registry, and the 2 points above:<br/>
+-Bitcoin can be seen as enabling the transfer of money;<br/>
+-Ethereum can be seen as this also but also ethereum can be seen as the transfer of ownership.</p>
+<p>These two technologies, or just ethereum, can be seen as addressing the two points above about land registrys
+database and transfer of ownership.</p>
+<h4>Page 19</h4>
+<h4>Notes made from 16 August 2016</h4>
+<p>Bitcoin and Ethereum have a database, but it's structured differently.  And is trustless and therefore requires 
+no trusted 3rd party.  It is peer to peer.</p>
+<p>You can collect tax at source and immediately.  I would suggest, in this essay, a voluntary transfer to the 
+blockchain like the land registry did/does with title registry.</p>
+<p>Developers time is usually spend on problems, either preventing them or handling them. (error codes, mistyping) and many other user and sstem errors.  But the benefits of ethereum far outweigh the negatives.  That's what the testnet is for.</p>
+<p>What is a database - definition needed.</p>
+<p>At the centre of the land registry is a database.</p>
+<p>Security and scalability: code is open source so anone can view and contribute.  There are plans for scalability over the next few years.  (& quality and transparency)</p>
+<p>Payments are non reversible.  Nature of peer to peer (no trusted 3rd party). Credit card are reversible.   The use of multisig, who holds the keys, under what conditions they change hands or when they are released, is important question to answer as they govern ultimate control of ownership.  What happens to a lost key in multisig? for example if someone dies.  Get replaced.  You could just 'sell' (call a predesigned function in the smart contract) the property to a new address which would have all the keys.  What if someone wanted only a cerntain number of keys, say only 2? (for example, if they paid for property in cash. i.e. no bank.) Could there be a choice given.</p>
 <p></p>
 <p></p>
 <p></p>
-<p></p>
-<h4>Notes made on 18 July 2016</h4>
-<p>IPFS - think this is the solution.  Just dump the whole Land Registry database on IPFS.  Implementation details
-required. (01 Aug 2016: Option is to transfer one property at a time.  That would require the land registry to have
-an account that has control over database of transactions transferred for the first time from their centralised
-database to ethereum (either swarm or ipfs).</p>
 
 
 
