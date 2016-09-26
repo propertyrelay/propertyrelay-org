@@ -8,25 +8,34 @@
   
   <meta name="author" content="Tim">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="css/styles.css?v=1.0">
-  <link rel="stylesheet" media="screen and (max-width: 700px)" href="css/mobile.css" />
-  <link rel='stylesheet' media='screen and (min-width: 701px)' href='css/laptop.css' />
+  <link rel="stylesheet" href="cssLR/styles.css?v=1.0">
+  <link rel="stylesheet" media="screen and (max-width: 700px)" href="cssLR/mobile.css" />
+  <link rel='stylesheet' media='screen and (min-width: 701px)' href='cssLR/laptop.css' />
   
 </head>
  
 <body>
   <!--<script src="js/scripts.js"></script>-->
+<div class="title">
+<!--<H2>A proposal for the Land Registry using Distributed Ledger Technology</H2>-->
+</div>
 <div class="bodyformat">
-<H2>A proposal for the Land Registry using Blockchain technologies</H2>
+
+<h4>Summary</h4>
+
+<p>"Distributed ledger technology has the potential to transform the delivery of public and private services."<a href="#7"><sup>[7]</sup></a>  Distributed Ledger Technology (DLT), of which Blockchain is a part, has been referred to as "...the Internet of value." <a href="#10"><sup>[10]</sup></a>  DLT is being analysed by many different organisations at home and abroad for use for many different applications involving value.  The UK Government's Chief Scientist has issued a report about the technology. Sweden's Land Registry is investigating: 'Sweden conducts trials of a blockchain smart contracts technology for land registry' <a href="#4"><sup>[4]</sup></a> and 'Estonia has an electronic land registry...reducing land transfers from three months to a little over a week.'<a href="#5"><sup>[5]</sup></a></p>  
+
+<p>These organisations are looking at different forms of DLT.  Both private and public DLTs are being investigated, however there is a move to use Open Source Software(OSS) that is the basis for public DLTs.  OSS is open to anyone, who can make contributions and use it freely.  The United States government is making guidelines for its agencies regarding OSS.  A memo was released on 8th August 2016 by Tony Scott, Whitehouse CIO, about open sourcing up to 20% of government agency's software<a href="#6"><sup>[6]</sup></a>.  Blockchain, is the basis of the two leading OSS projects by Market Capitalisation, Bitcoin and Ethereum, but Ethereum also implements Smart Contracts.</p>
+
 <h4>Introduction</h4>
 
 <p>The <a href="#blockchain">Blockchain</a> is an immutable distributed database encompassing associated technologies that have the potential to transform and greatly improve the real property transaction ecosystem.  At its center is the storage and transfer of ownership, of which the Land Registry is a very important part.  The blockchain-based technology that can significantly improve the transfer of ownership of real property is called a <a href="#smartContracts">smart contract.</a></p>
 
 <p>At the moment the real property transaction process - the sale of a property -  typically is a long process, taking about 2 months on average.  Improvements in the process have been made with advances in technology. For example the Land Registry offers the AP1 form and the use of electronic conveyancing and electronic signatures as introduced by the Land Registration Act 2002.</p>
 
-<p>Blockchain technologies change the dynamic of the relationships between the involved parties of the real property transaction.  It allows peer to peer transactions, with an altered role for the 3rd parties.  What this means for the Land Registry is that key parts of the title to land and property would be stored in a smart contract on the blockhchain in the form of a <a href="#hash">hash</a>, with a transformed and improved way of transferring ownership.</p>
+<p>Blockchain technologies change the dynamic of the relationships between the involved parties of the real property transaction.  It allows peer to peer transactions, with an altered role for the 3rd parties.  What this means for the Land Registry is that key parts of the title to land and property would be stored in a smart contract on the blockchain in the form of a <a href="#hash">hash</a>, with a transformed and improved way of transferring ownership.</p>
 
-<p>This arrangement could reduce the real property transaction time down to days, rather than months, depending on the status of the parties and property involved.  The Land Registry could charge a fixed fee or introduce a scaled charging structure based on the timeframe of the transaction.  The quicker and/or more involved the required response and resolution the higher the charge.  The fee structure could be fully transparent, and updatable depending on demand. Charges could be shown to the buyer so they have the choice.  Blockchain-based technology also could help automate and speed up the collection of taxes.</p>
+<p>This arrangement could reduce the real property transaction time down to days, rather than months.  The Land Registry could charge a fixed fee or introduce a scaled charging structure based on the timeframe of the transaction.  The quicker and/or more involved the required response and resolution the higher the charge.  The fee structure could be fully transparent, and updatable depending on demand. Charges could be shown to the buyer so they have the choice.  Blockchain-based technology also could help automate and speed up the collection of taxes.</p>
 
 <p>Property has significant value, it is governed by laws, and its transfer can be complicated.  This means that there are a number of parties involved in the transaction process.  In each transaction usually there is the buyer and seller, the Land Registry, solicitors, banks, Estate Agents and a surveyor.  The transaction process is varied based on the property and the circumstances of those involved in the process.  But many real property transactions involve exceptions that have standardised, quick and/or formalised, responses.  This lends the real property process to automation using Blockchain-based, and Information, Technology.</p>
 
@@ -34,7 +43,7 @@
 
 <h4>Land Registry</h4>
 
-<p>The purpose of the Land Registry is to maintain a register of ownership of land and property in England and Wales.  The Land Registry has been through a lot of changes since it was formed in 1862.  Inititally the registry was in the form of paper title deeds and plans.  Subsequently titles were transferred onto a database, where over 24 million records are currently maintained. </p> 
+<p>The purpose of the Land Registry is to maintain a register of ownership of land and property in England and Wales.  The Land Registry has been through a lot of changes since it was formed in 1862.  Inititally the registry was in the form of paper title deeds and plans.  Subsequently records of titles were transferred onto a database, where over 24 million records are currently maintained. </p> 
 
 <p>There are two factors about the Land Registry that lends itself to the conversion to a Blockchain model.  The Land Registry:</p>
 <ul>
@@ -42,69 +51,104 @@
 	<li>changes the state of the register in that database, representing transfer of ownership.</li>
 </ul>
 
-<p>These two factors, the storage of records in a database, and the transfer of ownership on this database, can be implemented using the blockchain based technologies.</p>
+<p>These two factors, the storage of records in a database, and the transfer of ownership in this database, can be implemented using Blockchain.</p>
 
 <h4 id="blockchain">Blockchain</h4>
 
-<p>A blockchain—originally, block chain—is a distributed database that maintains a continuously-growing list of data records secured from tampering and revision.<a href="#1"><sup>[1]</sup></a></p>
+<p>A blockchain—originally, block chain—is a distributed database that maintains a continuously-growing list of data records secured from tampering and revision.  Each block contains a timestamp and a link to a previous block.<a href="#1"><sup>[1]</sup></a></p>
 
-<p>The first issue, the storage of records in a database, is addressed by the blockchain.  The records currently held by the Land Registry could be transferred onto the blockchain.  The overiding reason to transfer records onto the blockchain instead of them being held by the Land Registry is that it greatly improves many aspects of the home buying and selling process.</p>
+<p>As it relates to the business of the Land Registry, the ownership details in land and property records can be stored and transferred on the blockchain.  In addition to ownership information, records in the form of electronic cash transactions can be stored and transferred on the blockchain.  With these two factors there is the possiblity of exchange between two parties, the buyer and seller of the property, entirely on the blockchain without many of the procedures presently carried out by third parties.  In it's initial incarnation, introduced in 2008, blockchain referred to a growing database of electronic cash transactions called Bitcoin.</p> 
 
-<p>Basically once a record is on the blockchain that record is immutable, meaning it can't be changed.  However, additional information can be added to the record.  So a new owner can be added to the record, but the previous owner is still listed on the record, building up a chain of ownership.  The last owner of the real property listed on the record is the difinitive one.  But not just anyone can add their name to the blockchain.  The Land Registry would have control of the first instance of ownership of a property put on the blockchain.  The only way for this chain of records to be added to would be through a smart contract.</p>
+<h4>Bitcoin</h4>
 
-<p>The blockchain is a chain of blocks.  In those blocks are transactions. The blockchain has been called 'The trust protocol'.<a href="#2"><sup>[2]</sup></a>  The basis of the blockchain is that it is peer-to-peer, requiring no third party.</p>
+<p>"Bitcoin is a peer-to-peer electronic cash system."<a href="#9"><sup>[9]</sup></a> "...and transactions take place between users directly, without an intermediary. These transactions are verified by network nodes and recorded in a public distributed ledger called the blockchain, which uses bitcoin as its unit of account. "<a href="#8"><sup>[8]</sup></a></p>
 
-<p>These two technologies, or just ethereum, can be seen as addressing the two points above about land registrys
-database and transfer of ownership.</p>
+<p>Within the context of the Land Registry, Bitcoin can be seen as the payment, an electronic cash transaction, in the real property transaction.  The advantages of using this mechanism is that it's secure, quick, incurs low fees, and is transparent.  </p>
 
-<p>Bitcoin and Ethereum have a database, but it's structured differently.  And is trustless and therefore requires 
-no trusted 3rd party.  It is peer to peer.</p>
+<p>Bitcoin transactions confirm on average in 10 minutes, but depends on the network.  A confirmation is similar in nature to clearing in a bank.  The greater the number of confirmations the greater the permanence of the transaction. As the payments for real property are significant value 6 confirmations or more is advisable. Transaction fees are very low at the moment.  Well under a $1 per transaction.  Transactions on the bitcoin blockchain are transparent, meaning they can be seen by anyone.</p>
 
-<p>The main reason to transfer the database to the blockchain is a technology built on top of it called Smart Contracts.</p>
+<p>Because of the way Bitcoin and blockchains are designed it can interact with other DLTs.  With the electonic cash payment recorded in the database, which is immutable and timestamped, this bitcoin payment information can be verified and used by the DLT that enables automation of the real property transaction is called a Smart Contract.</p>
 
 <h4 id="smartContracts">Smart Contracts</h4>
 
 <p>"Smart contracts are computer protocols that facilitate, verify, or enforce the negotiation or performance of a contract, or that make a contractual clause unnecessary. Smart contracts usually also have a user interface and often emulate the logic of contractual clauses."
 <a href="#3"><sup>[3]</sup></a></p>
 
-<p>The second issue, the transfer of ownership, is addressed by the smart contract. The smart contract transfers ownership of the land or property in exchange for a consideration.  It could do this by putting the ethereum address, property address and name(s) in the form of a hash in the mutable storage in the smart contract of the to a new owner based on the new owner satisfying some condition that the current owner specified.  Remortgaging is another use case.  The 'data' part of the transaction that is the payment part of the transaction would contain the present hash.</p>
+<p>The DLT that automates the transfer of ownership of the property and storage of the owners details on the blockchain, the other side of the tranaction, is handled by Smart Contracts.  This automated transfer of ownership is triggered by the fullfillment of the requirement specified by the owner in the Smart Contract.  i.e. the payment of the sale price of the real property, in bitcoins.</p>
 
-<p>A smart contract is written once, and can be called any number of times.</p>
+<p>The function of a Smart Contract is best explained with a comparison between a current process of selling an item, in Diagram 1, and how the process of a Smart Contract would be applied to it, in Diagram 2.  Diagram 2 is a hypothectical process that contains a hypothectical entity called an Augmented Independent Repository (AIR) that executes functions based on the actions of the parties involved. Basically this repository ensures that if the seller recieves the payment the item is automatically sent to the buyer, whoever that is.</p>
 
-<p>The smart contract has the potential to transform the way real property is transacted.  The Land Registry is central to 
-that.  This is because Title ownership is guaranteed by the government and law.  If title ownership can be transferred
-at the same time that payment is received it removes many of the processes that need to be done.  For example exchange of
-contracts would not be required as the transfer of Title is transferred by the smart contract automatically on the
-reception of payment.</p>
+<div id="centerarrowdiagramAB">
+	<p class="flowheading"><u>Analogy of operation of a Smart Contract - the Augmented Independent Repository (AIR)</u></p>
+	
+	<div id="arrowflowdiagramcontainerB">
+	<p class="flowheading">Diagram 1: Current transaction process</p>
+		<div class="arrowflowdiagrambody" id="arrow0b">Seller posts for-sale advert</div>
+		<div class="arrowflowdiagrambody" id="arrow1b">&nbsp;</div>
+		<div class="arrowflowdiagrambody" id="arrow2b">Buyer sends payment to seller</div>
+		<div class="arrowflowdiagrambody" id="arrow3b">&nbsp;</div>
+		<div class="arrowflowdiagrambody" id="arrow4b">Seller sends item to seller</div>
 
-<p>A contract is immutable, but it is possible for contracts to call other contracts, and there is also the possible to store a mutable value such as a contract address so subordinate contracts/ a tree of contracts can be referred to.</p>
+	</div>
+	<div id="arrowflowdiagramcontainerA">
+	<p class="flowheading">Diagram 2: Hypothetical AIR process</p>
+		<div class="arrowflowdiagrambody" id="arrow0a">Seller posts for-sale advert</div>
+		<div class="arrowflowdiagrambody" id="arrow1a">Seller sends item to repository</div>
+		<div class="arrowflowdiagrambody" id="arrow2a">Buyer sends payment to seller</div>
+		<div class="arrowflowdiagrambody" id="arrow3a">Repository gets payment notification</div>
+		<div class="arrowflowdiagrambody" id="arrow4a">Repository sends item to seller</div>
 
-<h4>Bitcoin</h4>
+	</div>
+	
+</div>
 
-<p>Within the context of the land registry Bitcoin can be seen as the consideration in the real property transaction.</p>
+<p>The process of selling something with nominal value probably doesn't need the added processes introduced in Diagram 2, but exchanging things of considerable value, this escrow-type service would provide considerable security to both the seller and buyer.  In particular, the AIR only releases the item when the seller recieves the payment.  And the buyer is automatically sent the item when the seller recieves the payment.</p>
 
-<p>Below is a basic introduction to how blockchain technologies relate to, and their use case by, the Land Registry.</p> 
-
-<p>Bitcoin is digital cash, but can be seen as the transfer of value between users.
-  Ethereum could also be seen as a transfer of value but it's main function is what's called a smart contract.  Both store
-transactions in a database, but unlike the centralised database of the Land Registry both use a distributed database.</p>
-
-<p>Bitcoin has a database of Unspent Transaction Outputs (UTXO).  But its main feature is that it's distributed.  A copy 
-of the database is a ledger consisting of blocks in a chain. </p> 
-
-<p>One of the main concerns about the blockchain is the removal of intermediaries.  This proposal suggests a measured
-transistion, one record at a time, not a mass migratation.  In the fashion that the Land Registry has taken in the past to
-property registration.</p>
+<p>Real property has considerable value, and becuase of the design of the blockchain, digital cash and smart contracts, the process similar to that shown in Diagram 2 can be translated to a real property transaction.  Instead of transferring a physical item, the smart contract transfers the ownership of real property in exchange for payment.  All done on the blockchain, reducing the process down to days.  The OSS DLT that has the second highest market cap to Bitcoin, and implements Smart Contacts, is Ethereum.
 
 <h4>Ethereum</h4>
 
-<p>In the context of the Land Registry Ethereum can be seen as the transfer of ownership.</p>
+<p>"Ethereum is a public blockchain-based distributed computing platform, featuring smart contract functionality. It provides a decentralized virtual machine, the Ethereum Virtual Machine (EVM), that can execute peer-to-peer contracts using a cryptocurrency called ether."<a href="#11"><sup>[11]</sup></a></p>
 
-<p>'Ethereum clients maintain a state database of all contracts, which is anologous to Bitcoins UTXO set.' from
-forum.ehtereum.org, 'Understanding data storage'.</p>
+<p>Ethereum implements smart contracts.  In the context of the Land Registry, in exchange for a payment in bitcoin to the seller of the real property, the smart contract transfers ownership from the seller to the buyer, and stores this information on the blockchain.</p>
 
-<p>Ethereum is similar to Bitcoin.  It is based on a distributed ledger, but its design uses accounts instead.  There
-are two types of of account: externally controlled and contract accounts.</p>
+<p>Bitcoin and Ethereum have separate blockchains.  So to a bridge is needed between them to verify the bitcoin payment on the Ethereum blockchain by relaying the transaction to the smart contract.  This bridge is called BTC Relay.</p>
+
+<p>The following diagram shows the real property transaction processs:</p>
+<div class="clear"></div>
+
+<div id="centerarrowdiagram">
+	<p class="flowheading2">Arrow Flow Diagram of buyer/seller transaction process</p>
+	
+	<div id="arrowflowdiagramcontainer">
+		
+		<div class="arrowflowdiagrambody" id="arrow1">Seller calls smart contract, advertising their real property and their bitcoin address</div>
+		<div class="arrowflowdiagrambody" id="arrow2">Buyer sends bitcoin to sellers bitcoin address</div>
+		<div class="arrowflowdiagrambody" id="arrow3">BTC Relay verifys buyers bitcoin transaction to sellers bitcoin address</div>
+		<div class="arrowflowdiagrambody" id="arrow4">Ethereum contract executes registering the buyers new ownership of the property</div>
+
+	</div>
+	<div id="time1"></div><div id="time2"><div id="timeText">time taken: < 60 minutes</div></div>
+</div>
+<div class="clear"></div>
+
+<p>In the first step of the above diagram, the relevant smart contract is called by the seller.  Before a contract can be called it must be written and deployed to the blockchain.  The contract in this case would be written by the Land Registry.  Once a contract is deployed on the blockchain it is permanent and immutable.  But contracts can call other contracts.  And also a varible in a contract can be coded that allows links to any contract.</p>
+
+<p>In the second step the buyer sends bitcoin to the sellers bitcoin address, given by the seller.  This is done by executing a bitcoin transaction.  The transaction contains a field called OP_RETURN that can hold data.  This data field would contain identifier details of the buyer.  The buyers Ethereum address would be included and the address of the property and the buyers name.  Other data could be added but because of the size contraints of the data field it may be necessary to store a hash of the data.</p>
+
+<p>The third step involves relaying the confirmation of the bitcoin transaction to the above mentioned smart contract.  Bitcoin has been used as the payment in this example, but if Ether, Ethereum's currency, was used in step 2 this process would be simpler. i.e. removes the need for BTC Relay.</p>
+
+<p>The fourth step is where the contract executes putting the buyers details on the blockchain.  Smart contracts are immutable but they also have a small amount of mutable storage. In fact a contract can hold 2^261 possible records of real properties in the form of hashes.  The ownership of each real property would use one of these records.  This data would be the proof of ownership of a real property.</p>
+
+<p>These 4 steps are a greatly simplified representation of the real property transaction process.  Many processes before and and during this process are needed.  For example checks by the surveyor need to be performed before a property is sold.  And also if a property chain is involved, this changes the dynamic of the process.  There are also questions about whether properties are on blockchain or off.  Also, in law property transactions have to be in writing, but like electronic signitures in the Land Registration Act 2002 something could be done.</p>
+
+<p>A very important part of the real property transaction process is source of funding.  The way in which financial intermediaries secure and maintain control over their loan in the absense of a title deed, and an important role for solicitors, is discussed in the section below, Multi-sig accounts. 
+
+<h4>Multi-sig accounts</h4>
+
+<p>Most real properties require some form of funding.  This funding is secured by the real property with which it was bought.  Currently, until this debt has been paid, the funder kept the title deed. With Ethereum, a multi-sig account can maintain this security.</p>
+
+<p>The multi-sig account would have 3 keys for 3 parties.  The owner, the funder, and a solicitor or arbitor.</p>
 
 <h4 id="hash">Hash</h4>
 
@@ -146,7 +190,60 @@ in the Land Registry database could 'buy' the property.  The owner would send th
 <p>The whole title record could be stored on a distributed database like IPFS.</p>
  
 <p>The 32 byte hash stored in the smart contract is the proof of ownership of that property.</p>
+
 <h4>Notes</h4> 
+
+<p>Even at the property tranaction rates that the Land Registry hit in 2007 the conversion would theoretically take at least 18 years to tranfer all 24 million records to the blockchain.</p>
+
+<p>The paper doesn't consider transfer between crypto currencies and fiat currency, but there are intermediaries like 
+coinbase that do this, addressing KYC and AML.  Conversion between fiat and a crypto currency such as Bitcoin, and payment times, would be quick, less than 10 minutes.</p>
+
+<p>bitcoin weaknesses(?)</p>
+
+<p>Sending a bitcoin payment is cheap, but converting from fiat currency to bitcoin is more complicated at the moment.  Setting up the bitcoin account takes time as digital asset exchange companies are required to undertake Know Your Customer (KYC) and Anti Money Laundering (AML) checks.  In addition, the current source of the large amount of fiat currency required for the purpose of buying the majority of real properties is a financial intermediary.</p>  
+
+<p>With the introduction of another tradable digital asset into the real property transaction process comes the features of existing financial instruments, like volatility. Usually, becuase the seller's loan would would be secured on the property they would want to convert to fiat as soon as possible. Financial instruments like futures, insurance or options could be used to mitigate risk of currency fluctations at any stage of the transaction process. If the property is not secured then the seller of the property may keep the Bitcoin for speculation or diversification.</p>
+
+<p>Real property transactions are large and could influence the price of bitcoin.  But with regard to the transfer, the price of bitcoin doesn't matter as long as it doesn't drop to nominal levels.  The current market cap, or total bitcoins in circulation is about £7 billion, ($10 billion). But bitcoin is not the only electonic cash payment.</p>
+
+<p>smart contracts</p>
+
+<p>Smart Contracts are similar to the US service used in real property exchange called escrow.</p>
+
+
+<p>It could do this by putting the ethereum address, property address and name(s) in the form of a hash in the mutable storage in the smart contract of the to a new owner based on the new owner satisfying some condition that the current owner specified.  Remortgaging is another use case.  The 'data' part of the transaction that is the payment part of the transaction would contain the present hash.</p>
+
+<p>In the case of the application of smart contracts to the transfer of ownership, the buyer would send money to the smart contract, and the smart contract would put the buyers details on the title deed.</p>
+
+<p>A smart contract is written once, and can be called any number of times.</p>
+
+<p>The smart contract has the potential to transform the way real property is transacted.  The Land Registry is central to 
+that.  This is because Title ownership is guaranteed by the government and law.  If title ownership can be transferred
+at the same time that payment is received it removes many of the processes that need to be done.  For example exchange of
+contracts would not be required as the transfer of Title is transferred by the smart contract automatically on the
+reception of payment.</p>
+
+<p>A contract is immutable, but it is possible for contracts to call other contracts, and there is also the possible to store a mutable value such as a contract address so subordinate contracts/ a tree of contracts can be referred to.</p>
+
+<p>ethereum</p>
+
+<p>This transaction information is stored in the transaction and in the smart contract themselves.  A smart contact can store 2^261 possible record references in the form of hashes.  Transactions are immutable but this 32 byte storage is mutable.  </p>
+
+<p>Two types of accounts: external and contract.</p>
+
+<p>2^261 possible records of real properties in the form of hashes.</p>
+
+<p>In the context of the Land Registry Ethereum can be seen as the transfer of ownership of real property.</p>
+
+<p>'Ethereum clients maintain a state database of all contracts, which is anologous to Bitcoins UTXO set.' from
+forum.ehtereum.org, 'Understanding data storage'.</p>
+
+<p>Ethereum is similar to Bitcoin.  It is based on a distributed ledger, but its design uses accounts instead.  There
+are two types of of account: externally controlled and contract accounts.</p>
+
+<h4>Current Blockchain Technologies</h4>
+
+
 <p>The Land Registry's database may be distributed in one sense, but the distinction between that and a Blockchain based
 distributed system is that it facilitates transactions that require no trusted 3rd party to validate them.</p>
 <p>There is a testnet on Ethereum where all it's features can be tested before moving to the mainnet.</p>
@@ -178,16 +275,46 @@ reduce costs, and reduce transaction times.</p>
 a new paradigm, a new model, of how the Land Registry could function.</p> 
 <p>The technology at the Land Registry is built around the following two things:</p> 
 
+
+
+<p>The first issue, the storage of records in a database, is addressed by the blockchain.  The records currently held by the Land Registry could be transferred onto the blockchain.  The overiding reason to transfer records onto the blockchain instead of them being held by the Land Registry is that it greatly improves many aspects of the home buying and selling process.</p>
+
+<p>Basically once a record is on the blockchain that record is immutable, meaning it can't be changed.  However, additional information can be added to the record.  So a new owner can be added to the record, but the previous owner is still listed on the record, building up a chain of ownership.  The last owner of the real property listed on the record is the difinitive one.  But not just anyone can add their name to the blockchain.  The Land Registry would have control of the first instance of ownership of a property put on the blockchain.  The only way for this chain of records to be added to would be through a smart contract.</p>
+
+<p>The blockchain is a chain of blocks.  In those blocks are transactions. The blockchain has been called 'The trust protocol'.<a href="#2"><sup>[2]</sup></a>  The basis of the blockchain is that it is peer-to-peer, requiring no third party.</p>
+
+<p>The main reason to transfer the database to the blockchain is a technology built on top of it called Smart Contracts.</p>
+
+<p>Below is a basic introduction to how blockchain technologies relate to, and their use case by, the Land Registry.</p> 
+
+<p>Bitcoin is digital cash, but can be seen as the transfer of value between users.
+  Ethereum could also be seen as a transfer of value but it's main function is what's called a smart contract.  Both store
+transactions in a database, but unlike the centralised database of the Land Registry both use a distributed database.</p>
+
+<p>Bitcoin has a database of Unspent Transaction Outputs (UTXO).  But its main feature is that it's distributed.  A copy 
+of the database is a ledger consisting of blocks in a chain. </p> 
+
+<p>One of the main concerns about the blockchain is the removal of intermediaries.  This proposal suggests a measured
+transistion, one record at a time, not a mass migratation.  In the fashion that the Land Registry has taken in the past to
+property registration.</p>
+<p>The second issue, the transfer of ownership of the real property, is addressed by the smart contract. The smart contract transfers ownership of the land or property in exchange for consideration.  </p>
+<p>Bitcoin is used by the buyer to make a payment to the current owner.  </p>
 <h4>Notes</h4>
 
-<p>The paper doesn't consider transfer between crypto currencies and fiat currency, but there are intermediaries like 
-coinbase that do this, addressing KYC and AML.  Conversion between fiat and a crypto currency such as Bitcoin would be quick. < 10 minutes.  The seller of the property may keep the Bitcoin for speculation or diversification, but if wanting to convert to fiat as soon as possible futures, insurance or options could be used to mitigate risk of currency fluctations at any stage of the transaction process. (These financial instruments don't yet exist for this purpose.) Real property transactions are large and could influce the price of bitcoin.  But with regard to the transfer the price of bitcoin doesn't matter as long as it doesn't drop to nominal levels.  The current market cap, or total bitcoins in circulation is about £7 billion, ($10 billion). </p>
+
 
 <h4>References</h4>
-<p id="1">[1] <a href="https://en.wikipedia.org/wiki/Blockchain_(database)" target="_blank">Wiki</p>
-<p id="2">[2] Blockchain Revolution book. Chapter 1</p> 
+<p id="1">[1] <a href="https://en.wikipedia.org/wiki/Blockchain_(database)" target="_blank">Wiki</a></p>
+<p id="2">[2] Blockchain Revolution, Chapter 1</p> 
 <p id="3">[3] <a href="https://en.wikipedia.org/wiki/Smart_contract" target="_blank">Wiki</a></p>
-
+<p id="4">[4] Blockchain Revolution, P198</p>
+<p id="5">[5] <a href=" https://bitcoinmagazine.com/articles/sweden-conducts-trials-of-a-blockchain-smart-contracts-technology-for-land-registry-1466703935" target="_blank">www.bitcoinmagazine.com</a></p>
+<p id="6">[6] <a href="https://sourcecode.cio.gov/" target="_blank">US Whitehouse CIO memo by Tony Scott</a></p>
+<p id="7">[7] <a href="https://www.gov.uk/government/news/distributed-ledger-technology-beyond-block-chain" target="_blank">Distributed Ledger Technology: Beyond Blockchain, Gov.uk, 19 Jaunary 2016</a></p>
+<p id="8">[8] <a href="https://en.wikipedia.org/wiki/Bitcoin" target="_blank">Wiki - Bitcoin</a></p>
+<p id="9">[9] <a href="https://bitcoin.org/bitcoin.pdf" target="_blank">Bitcoin Whitepaper</a></p>
+<p id="10">[10] Origin Unknown. Blockchain Revolution, i.</p>
+<p id="11">[11] <a href="https://en.wikipedia.org/wiki/Ethereum" target="_blank">Ethereum - Wiki</a></p>
 <p>Email: info{@}propertyrelay.org</br>
 Twitter: <a href="https://twitter.com/propertyrelay" target="_blank">@propertyrelay</a></br>
 Github: <a href="https://github.com/propertyrelay" target=_blank">propertyrelay</a></p>
