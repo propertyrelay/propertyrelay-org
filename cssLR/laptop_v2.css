@@ -1,9 +1,3 @@
-#bodycontainer{
-	width:100%;
-	margin:auto;
-	max-width:1400px;
-}
-
 .bodyformat {
 	margin: 0px 0px;
 	padding : 20px 100px;
@@ -14,15 +8,9 @@
 	
 	width:100%;
 	height:280px;
-	
-	background-image:url("../cssLR/images/brickwall.gif");
-	background-position:center top;
+	background-image:url("../cssLR/images/brickwall.jpg");
+	background-position:center center;
 	background-repeat:no-repeat;
-}
-
-.equborder {
-	
-	padding-top:20px;
 }
 
 .arrowflowdiagrambody {
@@ -52,15 +40,13 @@
 
 
 
-.centerarrowdiagram {
+#centerarrowdiagram {
 	
 	width:460px;
 	padding:30px;
 	margin:auto;
 		
 }
-
-
 
 #centerarrowdiagramAB {
 	
@@ -71,7 +57,7 @@
  */		
 }
 
-.arrowflowdiagramcontainer {
+#arrowflowdiagramcontainer {
 	margin:auto;
 	width:340px;
 	display:inline-block;
@@ -90,7 +76,6 @@
 	width:340px;
 	display:inline-block;
 	padding:20px;
-	vertical-align:top;
 	
 	/* border: 1px solid black; */	
 }
@@ -132,45 +117,11 @@
 	
 }
 
-#time3{
-	
-	width:50px;
-	height:380px;
-	border-top: 1px solid black;
-	border-bottom:1px solid black;
-	display:inline-block;
-	border-right:1px solid black;
-	vertical-align:top;
-	
-}
-
-#time4{
-	
-	width:50px;
-	height:380px;
-	border-top: 1px solid black;
-	border-bottom:1px solid black;
-	display:inline-block;
-	vertical-align:top;
-	
-	
-}
-
 #timeText{
 	
 	position:relative;
 	/* line-height:650px; */
 	padding-top:250px;
-	width:250px;
-	height:100%;
-	padding-left:15px;
-}
-
-#timeText2{
-	
-	position:relative;
-	/* line-height:650px; */
-	padding-top:180px;
 	width:250px;
 	height:100%;
 	padding-left:15px;
@@ -190,151 +141,133 @@
 }
 
 #arrow1{
-	background: #2072B2;
+	background: #0063D1;
 }
 #arrow1:after{
-	background: #F1E70D;
-	border-top: 20px solid #2072B2;
+	background: #F4AE01;
+	border-top: 20px solid #0063D1;
 	
 }
 
 #arrow2 {
-	background:#F1E70D;
+	background:#F4AE01;
 }
 #arrow2:after {
-	background:#0A905D;
-	border-top: 20px solid #F1E70D;
+	background:#85B716;
+	border-top: 20px solid #F4AE01;
 	
 }
 
 
 #arrow3 {
-	background:#0A905D;
+	background:#85B716;
 }
 
 #arrow3:after {
-	background:#F28F20;
-	border-top: 20px solid #0A905D;
+	background:#FD6301;
+	border-top: 20px solid #85B716;
 	
 }
 
 #arrow4 {
-	background: #F28F20;
+	background: #FD6301;
 }
 #arrow4:after {
 	background: white;
-	border-top: 20px solid #F28F20;
-	
-}
-
-#arrow1c{
-	background: #2072B2;
-}
-#arrow1c:after{
-	background: #F1E70D;
-	border-top: 20px solid #2072B2;
-	
-}
-
-#arrow2c {
-	background:#F1E70D;
-}
-#arrow2c:after {
-	background:#F28F20;
-	border-top: 20px solid #F1E70D;
-	
-}
-
-#arrow3c {
-	background:#F28F20;
-}
-
-#arrow3c:after {
-	background: white;
-	border-top: 20px solid #F28F20;
-	
-}
-
-#arrow4c {
-	background: #F28F20;
-}
-#arrow4c:after {
-	background: white;
-	border-top: 20px solid #F28F20;
+	border-top: 20px solid #FD6301;
 	
 }
 
 #arrow0a{
-	background: #E42426;
-	
+	background: #E43137;
 }
 #arrow0a:after{
-	background: #2072B2;
-	border-top: 20px solid #E42426;
+	background: #0063D1;
+	border-top: 20px solid #E43137;
 	
 }
 
 #arrow1a{
-	background: #2072B2;
+	background: #0063D1;
 }
 #arrow1a:after{
-	background: #F1E70D;
-	border-top: 20px solid #2072B2;
+	background: #F4AE01;
+	border-top: 20px solid #0063D1;
 	
 }
 
 #arrow2a {
-	background:#F1E70D;
+	background:#F4AE01;
 }
 #arrow2a:after {
-	background:#0A905D;
-	border-top: 20px solid #F1E70D;
+	background:#85B716;
+	border-top: 20px solid #F4AE01;
 	
 }
 
 
 #arrow3a {
-	background:#0A905D;
+	background:#85B716;
 }
 
 #arrow3a:after {
-	background:#F28F20;
-	border-top: 20px solid #0A905D;
+	background:#FD6301;
+	border-top: 20px solid #85B716;
 	
 }
 
 #arrow4a {
-	background: #F28F20;
+	background: #FD6301;
 }
 #arrow4a:after {
 	background: white;
-	border-top: 20px solid #F28F20;
+	border-top: 20px solid #FD6301;
 	
 }
 
 #arrow0b{
-	background: #E42426;
+	background: #E43137;
 }
 #arrow0b:after{
-	background: #F1E70D;
-	border-top: 20px solid #E42426;
+	background: #E43137;
+	border-top: 20px solid #E43137;
 	
 }
 
-#arrow1b {
-	background:#F1E70D;
+#arrow1b{
+	background: #E43137;
 }
-#arrow1b:after {
-	background:#6E398D;
-	border-top: 20px solid #F1E70D;
+#arrow1b:after{
+	background: #F4AE01;
+	border-top: 20px solid #E43137;
 	
 }
-	
+
 #arrow2b {
-	background: #6E398D;
+	background:#F4AE01;
 }
 #arrow2b:after {
+	background:#F4AE01;
+	border-top: 20px solid #F4AE01;
+	
+}
+
+
+#arrow3b {
+	background:#F4AE01;
+}
+
+#arrow3b:after {
+	background:#9508B7;
+	border-top: 20px solid #F4AE01;
+	
+}
+
+#arrow4b {
+	background: #9508B7;
+}
+#arrow4b:after {
 	background: white;
-	border-top: 20px solid #6E398D;
+	border-top: 20px solid #9508B7;
 	
 }

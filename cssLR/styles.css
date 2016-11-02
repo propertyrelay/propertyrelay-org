@@ -14,11 +14,15 @@ h2 {
 
 }
 
-p,ul {
+p,ul,ol {
     font-family: "Arial","Verdana";
     font-size: 16px;
 	line-height: 1.5;
 	
+}
+
+ol {
+	padding-right:5%;
 }
 
 a:link {
