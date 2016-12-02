@@ -23,6 +23,7 @@
 .equborder {
 	
 	padding-top:20px;
+	text-align:center;
 }
 
 .arrowflowdiagrambody {
@@ -54,21 +55,33 @@
 
 .centerarrowdiagram {
 	
-	width:460px;
-	padding:30px;
+	width:100%;
+	padding:10px;
 	margin:auto;
 		
 }
 
 
-
 #centerarrowdiagramAB {
 	
-	width:770px;
-	padding:50px;
+	width:100%;
+	
 	margin:auto;
-/* 	border: 1px solid black;
- */		
+	margin-right:100px;
+	/* border: 1px solid black; */
+		
+}
+
+#twoArrows {
+	
+	width:780px;
+	margin:auto;
+}
+
+.centerArrow {
+	
+	width:500px;
+	margin:auto;
 }
 
 .arrowflowdiagramcontainer {
@@ -79,11 +92,28 @@
 }
 
 #arrowflowdiagramcontainerA{
-	margin:auto;
+	
 	width:340px;
 	display:inline-block;
 	padding:20px;
 	/* border: 1px solid black; */	
+}
+#arrowflowdiagramcontainerB {
+	
+	width:340px;
+	display:inline-block;
+	padding:20px;
+	vertical-align:top;
+	
+	/* border: 1px solid black; */	
+}
+
+/* #arrowflowdiagramcontainerA{
+	margin:auto;
+	width:340px;
+	display:inline-block;
+	padding:20px;
+	
 }
 #arrowflowdiagramcontainerB {
 	margin:auto;
@@ -92,8 +122,8 @@
 	padding:20px;
 	vertical-align:top;
 	
-	/* border: 1px solid black; */	
-}
+		
+} */
 
 .flowheading {
 	
