@@ -9,7 +9,9 @@
   <meta name="author" content="Tim">
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="stylesheet" href="cssLR/styles.css?v=1.0">
-  <link rel='stylesheet' href='cssLR/laptop.css' />
+  <link rel="stylesheet" href="cssLR/laptop.css" />
+  <link rel="stylesheet" media="screen and (max-width: 700px)" href="cssLR/mobile.css" />
+
   <script type="text/javascript" async
   src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-MML-AM_CHTML">
   </script>
@@ -37,7 +39,7 @@
 
 <p>At the rate currently processed by the Land Registry approximately one million properties would be put on the blockchain per year.  If this 'natural rate' was implemented it would take about 24.5 years to transfer all the registered real property to the blockchain.  Although this timeline could be speeded up or slowed down as desired.</p>
 
-<p>The Land Registry would still be able to charge for the one-time transfer of the property from the in-house database to the blockchain until the transfer of all records is complete. Charges would be collected automatically specified in computer code and paid in digital cash, which could then be converted to fiat if desired.  Taxes could be collected at source in the same way, greatly improving on the current processes.</p>  
+<p>The Land Registry would still be able to charge for the one-time transfer of the property from the in-house database to the blockchain until the transfer of all records is complete. Charges would be collected automatically specified in computer code and paid in digital cash, which could then be converted to fiat money if desired.  Taxes could be collected at source in the same way, greatly improving on the current processes.</p>  
 
 <p>Bitcoin and Ethereum have already been designed and developed, the use of which would reduce resouce consumption and developement time of a blockchain solution from scratch.  The use of these technologies ultimately would transform and greatly improve the real property transaction process for the Land Registry, Government and buyers and sellers.</p>
 
@@ -126,23 +128,25 @@
 <p>The function of a smart contract is best explained with a comparison between how an online transaction may take place, in Diagram 1, and how the process of a smart contract would be applied to this same transaction process, in Diagram 2.  Diagram 2 is a hypothectical process that contains a hypothectical entity called an Automated Independent Distribution Centre (AIDR) that executes functions based on the actions of the parties involved. Basically this AIDR ensures that if the seller recieves the payment the item is automatically delivered to the buyer, whoever that is.</p>
 
 <div id="centerarrowdiagramAB">
+	<div id="twoArrows">
 	<p class="flowheading"><u>Analogy of operation of a Smart Contract - the Automated Independent Distribution Centre (AIDR)</u></p>
 	
-	<div id="arrowflowdiagramcontainerB">
-	<p class="flowheading">Diagram 1: Current transaction process</p>
-		<div class="arrowflowdiagrambody" id="arrow0b">Seller offers item for sale online</div>
-		<div class="arrowflowdiagrambody" id="arrow1b">Buyer accepts and sends payment to seller</div>
-		<div class="arrowflowdiagrambody" id="arrow2b">Seller delivers item to seller</div>
-		
-	</div>
-	<div id="arrowflowdiagramcontainerA">
-	<p class="flowheading">Diagram 2: Hypothetical AIDR process</p>
-		<div class="arrowflowdiagrambody" id="arrow0a">Seller offers item for sale online</div>
-		<div class="arrowflowdiagrambody" id="arrow1a">Seller sends item to AIDR</div>
-		<div class="arrowflowdiagrambody" id="arrow2a">Buyer accepts and sends payment to seller</div>
-		<div class="arrowflowdiagrambody" id="arrow3a">AIDR gets payment notification</div>
-		<div class="arrowflowdiagrambody" id="arrow4a">AIDR delivers item to seller</div>
+		<div id="arrowflowdiagramcontainerB">
+		<p class="flowheading">Diagram 1: Current transaction process</p>
+			<div class="arrowflowdiagrambody" id="arrow0b">Seller offers item for sale online</div>
+			<div class="arrowflowdiagrambody" id="arrow1b">Buyer accepts and sends payment to seller</div>
+			<div class="arrowflowdiagrambody" id="arrow2b">Seller delivers item to seller</div>
+			
+		</div>
+		<div id="arrowflowdiagramcontainerA">
+		<p class="flowheading">Diagram 2: Hypothetical AIDR process</p>
+			<div class="arrowflowdiagrambody" id="arrow0a">Seller offers item for sale online</div>
+			<div class="arrowflowdiagrambody" id="arrow1a">Seller sends item to AIDR</div>
+			<div class="arrowflowdiagrambody" id="arrow2a">Buyer accepts and sends payment to seller</div>
+			<div class="arrowflowdiagrambody" id="arrow3a">AIDR gets payment notification</div>
+			<div class="arrowflowdiagrambody" id="arrow4a">AIDR delivers item to seller</div>
 
+		</div>
 	</div>
 	
 </div>
@@ -167,17 +171,17 @@
 
 <div class="centerarrowdiagram">
 	<p class="flowheading2">Diagram 3: Arrow Flow Diagram of buyer/seller transaction process.  Ownership transfer: Ethereum;  Payment: Bitcoin</p>
-	
-	<div class="arrowflowdiagramcontainer">
-		
-		<div class="arrowflowdiagrambody" id="arrow1">Seller calls smart contract, advertising their real property and their bitcoin address</div>
-		<div class="arrowflowdiagrambody" id="arrow2">Buyer sends bitcoin to sellers bitcoin address</div>
-		<div class="arrowflowdiagrambody" id="arrow3">BTC Relay verifys buyers bitcoin transaction to sellers bitcoin address</div>
-		<div class="arrowflowdiagrambody" id="arrow4">Ethereum contract executes registering the buyers new ownership of the property</div>
+	<div class="centerArrow">
+		<div class="arrowflowdiagramcontainer">
+			
+			<div class="arrowflowdiagrambody" id="arrow1">Seller calls smart contract, advertising their real property and their bitcoin address</div>
+			<div class="arrowflowdiagrambody" id="arrow2">Buyer sends bitcoin to sellers bitcoin address</div>
+			<div class="arrowflowdiagrambody" id="arrow3">BTC Relay verifys buyers bitcoin transaction to sellers bitcoin address</div>
+			<div class="arrowflowdiagrambody" id="arrow4">Ethereum contract executes registering the buyers new ownership of the property</div>
 
+		</div>
+		<div id="time1"></div><div id="time2"><div id="timeText">time taken: < 60 minutes</div></div>
 	</div>
-	<div id="time1"></div><div id="time2"><div id="timeText">time taken: < 60 minutes</div></div>
-	
 </div>
 
 <p>In the first step of the above diagram, the relevant smart contract is called by the seller.  Only the owner can call the smart contract and therefore put the real property up for sale.  The smart contract would check the data sent with the owners transaction against the ownership details stored in the smart contract.</p>      
@@ -198,19 +202,20 @@
 
 <div class="centerarrowdiagram">
 	<p class="flowheading2">Diagram 4: Arrow Flow Diagram of buyer/seller transaction process. Ownership transfer: Ethereum; Payment: Ether</p>
-	
-	<div class="arrowflowdiagramcontainer">
-		
-		<div class="arrowflowdiagrambody" id="arrow1c">Seller calls smart contract, advertising their real property and their ether address</div>
-		<div class="arrowflowdiagrambody" id="arrow2c">Buyer sends ether to sellers ether address</div>
-		<div class="arrowflowdiagrambody" id="arrow3c">Ethereum contract executes registering the buyers new ownership of the property</div>
+	<div class="centerArrow">
+		<div class="arrowflowdiagramcontainer">
+			
+			<div class="arrowflowdiagrambody" id="arrow1c">Seller calls smart contract, advertising their real property and their ether address</div>
+			<div class="arrowflowdiagrambody" id="arrow2c">Buyer sends ether to sellers ether address</div>
+			<div class="arrowflowdiagrambody" id="arrow3c">Ethereum contract executes registering the buyers new ownership of the property</div>
+		</div>
+		<div id="time3"></div><div id="time4"><div id="timeText2">time taken: < 6 minutes</div></div>
 	</div>
-	<div id="time3"></div><div id="time4"><div id="timeText2">time taken: < 6 minutes</div></div>
 </div>
 
 <p>The process shown in Diagram 4 is simpler than Diagram 3 in both design and use.  It uses ether as the payment currency and therefore BTC relay is not needed.  Implementing the Ethereum only option would be the 'easier' solution, but offering both solutions would provide redundency and flexibility.</p>
 
-<p>The above two diagrams, while presenting the major steps in the real property transaction process, are a simplified overview.  Many steps before and during this process need to be discussed, designed and incorporated.  For example, property price negotiation, funding, including deposit, surveys, and conveyancing searches and the property chain (as distinct from the blockchain), that are currently handled by the solicitor and estate agent would be automated, coded into Ethereum's smart contracts, and merged into this new process.</p>
+<p>While presenting the major steps in the real property transaction process the above two diagrams are a simplified overview.  Current processes such as property price negotiation, funding, including deposit, surveys, conveyancing searches, and the property chain (as distinct from the blockchain) that are currently handled by intermediaries would need to be developed around this new blockchain model and coded into Ethereum's smart contracts.</p>
 
 <p>The way in which the real property would be added to the blockchain by the Land Registry is through the form AP1.</p>
 <h4 id="h4_7">Form AP1</h4>
@@ -333,8 +338,9 @@ Land Registry costs.  Once this is done the property is on the blockchain.  The 
 
 <p id="24">[24]  Average property price in September of 2007: £190,032.<a href="#29"><sup>[29]</sup></a>  1 million worth of property procesed by the Land Registry per minute divided by the average property price equals 5.26:</p>
 <!-- <p>$$x = {-b \pm \sqrt{b^2-4ac} \over 2a}.$$</p> -->
-<p class="equborder">$$Years \:for \:transfer = { No. \:of \:Properties \:in \:Database \over Days \:of \:Year\: * \:Hours\: * \:Minutes\: * No. \:of \:Property \:Sales \:Per \:Minute} $$</p>
-<p class="equborder">$$ = {24,000,000 \over 365 &nbsp;* 8.5 * 60 * 5.26}$$</p>
+<p class="equborder">$$Years \:for \:transfer = \dfrac{ No. \:of \:Properties \:in \:Database} { Days \:of \:Year\: \times \:Hours\: \times \:Minutes\: \\\times No. \:of \:Property \:Sales \:Per \:Minute} $$</p>
+
+<p class="equborder">$$ = \dfrac{24,000,000}{ 365 \times 8.5 \times 60 \times 5.26}$$</p>
 <p class="equborder">$$ = {24.5 \:Years}$$</p>
 
 <h4 id="h4_14">References</h4>
